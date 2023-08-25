@@ -1,13 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wawatmos</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="modify.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <a-scene>
+      <a-plane color="white" position="0 0 -10" rotation="-90 0 0" width="0.25" height="70"></a-plane>
+      <a-sky color="lightblue"></a-sky>
+      <a-entity material="fog: false"></a-entity>
+      <!-- <a-scene fog="type: linear; color: #AAA"></a-scene> -->
+      <!-- <a-scene fog="type: linear; color: #AAB; far: 150; near: 0"> -->
+      
+     
+    <a-entity 
+          id="cloud" 
+          position="3 1.5 1"
+          rotation="0.5 0 0" 
+          scale="0.5 0.5 0.5"  
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+  
+    <a-entity 
+          id="cloud" 
+          position="-3 1.5 -1"
+          rotation="0 0 0" 
+          scale="0.8 0.9 0.7"  
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="-3 1.5 -5"
+          animation="property: position; to: -3 1 -5; dur: 2000; easing: linear; loop: true" color="tomato"></a-box>
+          rotation="0 0.5 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          
+          position="3 1.5 -10" 
+          rotation="0 0 0" 
+          scale="1 0.9 0.7" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="-3 1.5 -15" 
+          rotation="0 0 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="3 1.5 -20" 
+          rotation="0 0 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="-3 1.5 -25" 
+          rotation="0 0 0" 
+          scale="1 0.9 0.7" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      <!-- -->
+      <a-entity 
+          id="cloud" 
+          position="3 1.5 -30"
+          rotation="0.5 0 0" 
+          scale="0.5 0.5 0.5"  
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+  
+    <a-entity 
+          id="cloud" 
+          position="-3 1.5 -35"
+          rotation="0 0 0" 
+          scale="0.8 0.9 0.7"  
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="-3 1.5 -40"
+          animation="property: position; to: -3 1 -5; dur: 2000; easing: linear; loop: true" color="tomato"></a-box>
+          rotation="0 0.5 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="3 1.5 -45" 
+          rotation="0 0 0" 
+          scale="1 0.9 0.7" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="-3 1.5 -50" 
+          rotation="0 0 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="3 1.5 -55" 
+          rotation="0 0 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+      
+      <a-entity 
+          id="cloud" 
+          position="-3 1.5 -60" 
+          rotation="0 0 0" 
+          scale="1 0.9 0.7" 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
+      ></a-entity>
+    
+    
+      
+      
+      <!-- PAJAROS -->
+      
+      <a-entity 
+          id="birds" 
+          position="2 1.5 -2" 
+          rotation="0 0 0" 
+          scale="0.7 0.7 0.7" 
+          animation-mixer="action" 
+      
+          play-all-model-animations 
+          modify-materials 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/birds%20(1).glb?v=1692878656320"
+      ></a-entity>
+      
+      <a-entity 
+          id="birds" 
+          position="-2 1.5 -4" 
+          rotation="0 0 0" 
+          scale="0.7 0.7 0.7" 
+          animation-mixer="action" 
+          play-all-model-animations 
+          modify-materials 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/birds%20(1).glb?v=1692878656320"
+      ></a-entity>
+      
+      <a-entity 
+          id="birds" 
+          position="2 1.5 -8" 
+          rotation="0 0 0" 
+          scale="1 1 1" 
+          animation-mixer="action" 
+      
+          play-all-model-animations 
+          modify-materials 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/birds%20(1).glb?v=1692878656320"
+      ></a-entity>
+      
+      <a-entity 
+          id="birds" 
+          position="-2 1.5 -13" 
+          rotation="0 0 0" 
+          scale="1 1 1" 
+          animation-mixer="action" 
+          play-all-model-animations 
+          modify-materials 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/birds%20(1).glb?v=1692878656320"
+      ></a-entity>
+    
+      <a-entity 
+          id="birds" 
+          position="2 1.5 -19" 
+          rotation="0 0 0" 
+          scale="1 1 1" 
+          animation-mixer="action" 
+      
+          play-all-model-animations 
+          modify-materials 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/birds%20(1).glb?v=1692878656320"
+      ></a-entity>
+      
+      <a-entity 
+          id="birds" 
+          position="-2 1.5 -22" 
+          rotation="0 0 0" 
+          scale="1 1 1" 
+          animation-mixer="action" 
+          play-all-model-animations 
+          modify-materials 
+          gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/birds%20(1).glb?v=1692878656320"
+      ></a-entity>
+    
+      
+      <!-- OCULUS CONTROLLERS -->
+      <!--
+      <a-entity id="cameraRig">
+        <a-entity camera position="0 1.6 0">
+          <a-text id="message" position="-1 2 -3" color="white" align="center" value=""></a-text>
+        </a-entity>
+        <a-entity oculus-touch-controls="hand: left"
+                  collider-check raycaster="objects: .collidable; showLine: true"
+                  thumbstick-logging></a-entity>
+        <a-entity oculus-touch-controls="hand: right"
+                  collider-check raycaster="objects: .collidable; showLine: true"
+                  thumbstick-logging></a-entity>
+      </a-entity> -->
+    
+    </a-scene>
   </body>
 </html>
