@@ -1,436 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A-Frame Babia components</title>
+    <meta name="description" content="Babia Bars example." />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="assets/aframe-babia-components.js"></script>
 
+    <link rel="icon" href="/assets/logo.svg">
+    <title>SEO-BirdLife</title>
     
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
+    <link src="assets/modify.js">
+    <link src="assets/app.js">
+</head>
 
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-babia-components/dist/aframe-babia-components.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-  </head>
-  
-  
-  <body>
-    <a-scene>
 
-        <!-- Environment -->
+<body>
+    <a-scene background="color: #A8F3FF" id="AframeScene">
+        <!-- ENVIROMENT -->
         <a-plane color="white" position="0 0 -10" rotation="-90 0 0" width="0.25" height="90"></a-plane>
         <a-sky color="lightblue"></a-sky>
-        <!-- <a-scene fog="type: linear; color: #AAA"></a-scene> -->
 
+        <a-camera position="1 0 20"></a-camera>
+        <!-- Resto de tu escena aquí -->
 
-        <!-- Light -->
-        <!-- <a-light type="point" intensity="1" position="-10 20 30"></a-light> -->
-      
-  
-        <!-- Data -->      
-        <a-entity id="data" babia-queryjson="url: ./data.json"></a-entity>
-        <!-- 3DBars-->
-        <a-entity position="5 -0.5 20" rotation="0 -210 0" scale="0.6 0.6 0.6">
-          <a-entity babia-barsmap="from: data; legend: true; palette: ubuntu;
-                      x_axis: model; z_axis: color; height: sales" 
-                      position="-10 0 0" scale="1 1 1"></a-entity>
+        <!-- OCULUS CONTROLLERS -->
+      <!--
+      <a-entity id="cameraRig">
+        <a-entity camera position="0 1.6 0">
+          <a-text id="message" position="-1 2 -3" color="white" align="center" value=""></a-text>
         </a-entity>
-        
-      
-        <!-- Filtered Data -->
-        <a-entity id="filter-data" babia-filter="from: data; filter:motor=diesel"></a-entity>
-        
-      
-      
-        <!-- Camera -->
-        <a-camera position="0 1 35" wasd-controls="acceleration: 70; fly: true;"
-        ></a-camera>
+        <a-entity oculus-touch-controls="hand: left"
+                  collider-check raycaster="objects: .collidable; showLine: true"
+                  thumbstick-logging></a-entity>
+        <a-entity oculus-touch-controls="hand: right"
+                  collider-check raycaster="objects: .collidable; showLine: true"
+                  thumbstick-logging></a-entity>
+      </a-entity> -->
 
-
-       <!-- --------------------------------- LEFT CLOUDS --------------------------------- -->   
-       <!-- --------------------------------- LEFT CLOUDS --------------------------------- -->   
-       <a-entity>
-        <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 1.5 20"
-             rotation="0.5 25 0" 
-             scale="0.7 0.7 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-     
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 -1.5 10"
-             rotation="0.5 25 0" 
-             scale="0.5 0.5 0.5"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 2.5 0"
-             rotation="0.5 25 0" 
-             scale="0.7 0.7 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-4.5 1.5 -10"
-             rotation="0.5 25 0" 
-             scale="1 1 1"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 -1.5 -20"
-             rotation="0.5 25 0" 
-             scale="0.5 0.5 0.5"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 2.5 -30"
-             rotation="0.5 25 0" 
-             scale="0.5 0.5 0.5"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-4.5 1.5 -40"
-             rotation="0.5 25 0" 
-             scale="1 1 1"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 -1.5 -50"
-             rotation="0.5 25 0" 
-             scale="0.5 0.5 0.5"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-left" class="cloud" 
-             position="-3.5 2.5 -60"
-             rotation="0.5 25 0" 
-             scale="0.5 0.5 0.5"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-       </a-entity>
-       
-       <!-- --------------------------------- RIGHT CLUDS --------------------------------- -->   
-       <!-- --------------------------------- RIGHT CLUDS --------------------------------- -->   
-       <!-- 
-       <a-entity>
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 2.5 25"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 1.5 15"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 -1.5 5"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 2.5 -5"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 1.5 -15"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-       
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 -1.5 -25"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="4.5 2.5 -35"
-             rotation="0.5 -25 0" 
-             scale="1 1 1"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 1.5 -45"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 -1.5 -55"
-             rotation="0.5 -25 0" 
-             scale="0.8 0.8 0.8"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-right" class="cloud" 
-             position="3.5 2.5 -65"
-             rotation="0.5 -25 0" 
-             scale="1 1 1"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-       </a-entity>  
-       -->
-       <!-- --------------------------------- TOP CLUDS --------------------------------- --> 
-       <!-- --------------------------------- TOP CLUDS --------------------------------- -->   
-       <a-entity>
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="-5 6 20"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="-11 3 10"
-             rotation="90 0 0" 
-             scale="1.3 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="1 6 0"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="14 3 -10"
-             rotation="90 0 0" 
-             scale="1 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="-6 6 -20"
-             rotation="90 0 0" 
-             scale="1.5 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="-13.3 3 -30"
-             rotation="90 0 0" 
-             scale="1.2 1 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="2 6 -40"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="12.5 3 -50"
-             rotation="90 0 0" 
-             scale="1 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="0 3 -60"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-top" class="cloud" 
-             position="-6.5 4 -70"
-             rotation="90 0 0" 
-             scale="1 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-       </a-entity> 
-        
-        <!-- --------------------------------- BOTTOM CLUDS --------------------------------- -->  
-        <!-- --------------------------------- BOTTOM CLUDS --------------------------------- -->   
-       <a-entity>
-        <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="-5 -6 20"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="-11 -3 10"
-             rotation="90 0 0" 
-             scale="1.3 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="1 -6 0"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="14 -3 -10"
-             rotation="90 0 0" 
-             scale="1 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="-6 -6 -20"
-             rotation="90 0 0" 
-             scale="1.5 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="-13.3 -3 -30"
-             rotation="90 0 0" 
-             scale="1.2 1 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="2 -6 -40"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="12.5 -3 -50"
-             rotation="90 0 0" 
-             scale="1 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="0 -3 -60"
-             rotation="90 0 0" 
-             scale="1.3 0.8 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-        
-       <a-entity 
-             class="cloud-bottom" class="cloud" 
-             position="-6.5 -4 -70"
-             rotation="90 0 0" 
-             scale="1 0.6 0.7"  
-             gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-       </a-entity>  
-   
-         <!-- --------------------------------- BIG CLUDS --------------------------------- -->  
-         <!-- --------------------------------- BIG CLUDS --------------------------------- -->  
-        <!-- 
-         <a-entity>
-       <a-entity 
-               class="cloud-big" class="cloud" 
-               position="10 0 20"
-               rotation="0 -40 0" 
-               scale="3 2 3"  
-               gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-               class="cloud-big" class="cloud" 
-               position="-10 0 0"
-               rotation="0 40 0" 
-               scale="3 2 3"  
-               gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-               class="cloud-big" class="cloud" 
-               position="10 0 -20"
-               rotation="0 -40 0" 
-               scale="3 2 3"  
-               gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-               class="cloud-big" class="cloud" 
-               position="-10 0 -40"
-               rotation="0 40 0" 
-               scale="3 2 3"  
-               gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-   
-       <a-entity 
-               class="cloud-big" class="cloud" 
-               position="10 0 -60"
-               rotation="0 -40 0" 
-               scale="3 2 3"  
-               gltf-model="https://cdn.glitch.global/7b192848-4f3a-4b31-886b-b5fafab966d0/model.gltf?v=1692876767721"
-       ></a-entity>
-       </a-entity>   
-       -->
-       
-         
-
-
+        <!-- Aquí vamos a añadir las barras desde la API -->
+        <a-entity id="bar-container" position="0 0 0" rotation="0 0 0"></a-entity>
+        <a-entity text="value: 2013; align: right; width: 10; color: #511845" position="0 8.74318 4.48508" rotation="" animation="property: text.opacity; to: 1; dur: 2000"></a-entity>
     </a-scene>
 
-    
-  </body>
+    <script id="fw-bars">
+        // Realizar una solicitud HTTP para obtener los datos de la API
+        var requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+        };
+
+        fetch("https://seobirdlife.coderf5.es/seguidores/rrss/apis", requestOptions)
+            .then(response => response.json())
+            .then(data => {
+                // Obtener la referencia al contenedor de las barras
+                const barContainer = document.querySelector('#bar-container');
+
+                // Crear el atributo data para babia-bars usando los datos de la API
+                const babiaBarsData = data.map(item => {
+                    return {
+                        x_axis: item.fkYear.year.toString(), // Convertir el año a cadena
+                        height: item.cantidad,
+                        rotation: "0 0 0",
+                        tooltip: `Año: ${item.fkYear.year}\nCantidad: ${item.cantidad}`
+                    };
+                });
+
+                // Crear la entidad babia-bars con el atributo data actualizado
+                const babiaBarsEntity = document.createElement('a-entity');
+                babiaBarsEntity.setAttribute('babia-bars', {
+                    legend: true,
+                    axis: true,
+                    palette: "ubuntu",
+                    titleColor: "#FFFFFF",
+                    titleFont: "#optimerBoldFont",
+                    titleRotation: "0 0 0",
+                    heightMax: 20,
+                    animation: true,
+                    data: babiaBarsData // Usar los datos actualizados
+                });
+
+                // Agregar la entidad babia-bars al contenedor
+                barContainer.appendChild(babiaBarsEntity);
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos:', error);
+            });
+    </script>
+</body>
 </html>
