@@ -5,3 +5,161 @@
     color: black;
     
   }
+
+/* Reset de estilos para el body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+/* Estilos para la sección hero */
+.hero {
+  display: grid;
+  position: relative;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+  place-items: center;
+  overflow: hidden;
+  animation: clip-hero-anim 1.25s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+  will-change: clip-path;
+}
+
+.title-seo {
+  font-size: 80px;
+  margin-bottom: 150px;
+  margin-top: -20px;
+}
+
+/* Estilos para el fondo de la sección hero */
+.hero__bg,
+.hero__cnt {
+  align-self: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.hero__bg {
+  display: grid;
+  position: relative;
+  z-index: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  animation: fade-in 0.75s linear;
+  will-change: opacity;
+}
+
+.hero__bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: -10%;
+  right: -10%;
+  bottom: -10%;
+  left: -10%;
+  background: rgba(41, 4, 47, 0.4);
+  background-blend-mode: screen;
+}
+
+.hero__bg picture {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  animation: scaling-hero-anim 4s 0.25s cubic-bezier(0, 0.71, 0.4, 0.97) forwards;
+  will-change: transform;
+}
+
+.hero__bg img {
+  display: block;
+  object-fit: cover;
+  object-position: 77% 50%;
+  height: auto;
+  width: 120%;
+}
+
+/* Estilos para el contenido de la sección hero */
+.hero__cnt {
+  display: grid;
+  position: relative;
+  place-items: center;
+  z-index: 10;
+  color: #FFF;
+  font-size: 2.5vw;
+  opacity: 0;
+  animation: fade-in 0.75s 1.5s linear forwards;
+}
+
+.hero__cnt svg {
+  height: 12vw;
+}
+
+.hero__cnt path {
+  fill: #FFF;
+}
+
+.hero__cnt h1 {
+  margin-bottom: 0;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Estilos para el botón con fondo blanco */
+.white-button {
+  background-color: white;
+  color: rgb(40, 59, 83);
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  font-size: 30px;
+  width: 250px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.white-button:hover {
+  background-color: #d3d3d3;
+}
+
+.white-button a {
+  text-decoration: none;
+  color: rgb(40, 59, 83);
+}
+
+/* Estilos de animación */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaling-hero-anim {
+  from {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes clip-hero-anim {
+  from {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
