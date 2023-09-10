@@ -1,0 +1,111 @@
+a-scene img {
+    display: block;
+}
+
+
+
+/* Desktop */
+@media only screen and (max-width: 1000px) {
+    .menu-navegacion {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .menu-navegacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        bottom: 6px;
+        right: 50%;
+        transform: translateX(50%); 
+    }
+    .lft-rgt {
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+    .up-down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .btn-mov {
+        width: 55px;
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.369);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 20px; 
+        border: none; 
+        outline: none;
+        box-shadow: 0px 0px 17px rgba(26, 35, 46, 0.6);
+    }
+    .btn-mov img {
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+    }
+    .btn-mov:hover {
+        background-color: rgba(255, 255, 255, 0.676);
+    }
+} 
+
+/* Mobile */
+@media (max-width: 450px) {
+    .menu-navegacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        position: fixed;
+        bottom: 6px;
+        right: 50%;
+        transform: translateX(50%); 
+    }
+    .lft-rgt {
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+    .up-down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .btn-mov {
+        width: 55px;
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.369);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 20px; 
+        border: none; 
+        outline: none;
+        box-shadow: 0px 0px 17px rgba(26, 35, 46, 0.6);
+    }
+    .btn-mov img {
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+    }
+    .btn-mov:hover {
+        background-color: rgba(255, 255, 255, 0.676);
+    }
+}
+

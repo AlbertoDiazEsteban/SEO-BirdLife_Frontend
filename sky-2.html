@@ -1,514 +1,375 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Babia Bars example." />
+  <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
-    <!-- <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script> -->
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
     <script src="assets/js/aframe-babia-components.js"></script>
-
-    <link rel="icon" href="/assets/img/logo.svg">
-    <title>SEO-BirdLife prueba</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="./assets/js/modify.js"></script>
-    <script src="./assets/js/app.js"></script>
-</head>
+    <link rel="icon" href="assets/img/logo.svg">
+    <title>SEO-BirdLife Mapas</title>
+    
+    <script src="assets/js/modify.js"></script>
+    <script src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <script src="assets/js/navigation-menu.js"></script>
+    <link rel="stylesheet" href="assets/css/navegacion-menu.css">
+
+  </head>
 
 
-<body>
-    <a-scene id="AframeScene">
-        <!-- ENVIROMENT -->
-        <a-plane color="white" position="0 0 0" rotation="-90 0 0" width="0.25" height="190"></a-plane>
-        <a-sky src="assets/img/dawn.png"></a-sky>
-        <a-entity material="fog: false"></a-entity>
-        <a-scene fog="type: linear; color: #AAA"></a-scene> 
+  <body>
+
+
+    <a-scene cursor="rayOrigin: mouse" frustum-culling="true">
         
-        <!-- <a-camera position="0 1 35"></a-camera> -->
-        <a-camera position="0 1 35" look-controls wasd-controls></a-camera>
-        <a-entity id="main-bird" position="0 1 31.5" rotation="-10 180 0" wasd-controls look-controls
-            animation-mixer="action" play-all-model-animations modify-materials 
-            gltf-model="/assets/models/low_poly_bird.glb"
+    <!-- MENÚ FLOTANTE -->
+    <div class="container">
+      <input type="checkbox" id="btn-mas">
+      <div class="redes">
+          <a href="sky-3.html" class="hitos">
+              <img src="assets/img/button/hitos.svg" alt="logo icono hitos">
+              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
+              </svg>
+          </a>
+          <a href="sky-1.html" class="datos">
+              <img src="assets/img/button/datos.svg" alt="logo icono datos">
+              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.7"/>
+              </svg>
+          </a>
+          <a href="sky-2.html" class="mapas">
+              <img src="assets/img/button/mapas.svg" alt="logo icono mapas">
+              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
+              </svg>
+          </a>
+          <a href="https://seo.org/" class="seobirdlife">
+              <img src="assets/img/button/seo.svg" alt="logo icono datos">
+              <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
+              </svg>
+          </a>
+      </div>
+      <div class="btn-mas">
+          <img src="assets/img/button/main-btn.svg" alt="logo icono datos">
+          <label for="btn-mas" class="fa fa-plus">
+          </label>
+      </div>
+    </div> 
+
+    <!-- MENÚ NAVEGACIÓN EN RESPONSIVE -->
+    <div class="menu-navegacion">
+      <div class=" lft-rgt">
+          <button type="button" class="btn-mov btn-lft" onclick="moveCameraLeft">
+            <img src="assets/img/button/nav-left.svg" alt="derecha">
+          </button>
+          <button type="button" class="btn-mov btn-rgt" onclick="moveCameraRight">
+            <img src="assets/img/button/nav-right.svg" alt="izquierda">
+          </button>
+      </div>
+      <div class="up-down">
+          <button type="button" class="btn-mov btn-up">
+            <img src="assets/img/button/nav-up.svg" alt="arriba">
+          </button>
+          <button type="button" class="btn-mov btn-down" onclick="moveCameraDown">
+            <img src="assets/img/button/nav-down.svg" alt="abajo">
+          </button>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- ----------------------- ENVIROMENT ----------------------- -->
+    <a-camera position="0 8 0" rotation="20 90 0"></a-camera>
+
+    <a-light color="white" type="point" intensity="0.6" position="0 10 0"></a-light>
+    <a-light color="white" type="ambient" intensity="0.6" position="0 10 0"></a-light>
+    <a-sky src="assets/img/dawn.png"></a-sky>
+    <a-circle position="0 -2 0" radius="2" color="white" scale="15 15 15" rotation="-90 0 0" repeat="3 3"
+    material="src: assets/img/floor.png"></a-circle>
+    <a-cone color="white" radius-bottom="33" radius-top="30" open-ended="true" height="-2"
+     position="0 3 0" scale="1 1 1" opacity="0.9" roughness="0.1"></a-cone>
+    <a-cone color="white" radius-bottom="33" radius-top="30" open-ended="true" height="-2"
+     position="0 6 0" scale="1.1 1.1 1.1" opacity="0.9" roughness="0.1"></a-cone>
+    <a-cone color="white" radius-bottom="33" radius-top="30" open-ended="true" height="-2"
+     position="0 9.4 0" scale="1.25 1.15 1.15" opacity="0.9" roughness="0.1"></a-cone>
+    
+    <a-cone color="grey" radius-bottom="33" radius-top="30" open-ended="true" height="2"
+     position="0 3 0" scale="1 1 1" opacity="0.6" rotation="0 0 180"></a-cone>
+    <a-cone color="grey" radius-bottom="33" radius-top="30" open-ended="true" height="2"
+     position="0 6 0" scale="1.1 1.1 1.1" opacity="0.6" rotation="0 0 180"></a-cone>
+    <a-cone color="grey" radius-bottom="33" radius-top="30" open-ended="true" height="2"
+     position="0 9.4 0" scale="1.25 1.15 1.15" opacity="0.6" rotation="0 0 180"></a-cone>
+
+    <a-cylinder position="0 20 0" radius="2" color="white" scale="15 15 15" height="0.03"
+     rotation="0 0 0" opacity="0.7"></a-cylinder>
+
+    <a-torus color="grey" arc="270" radius="6" radius-tubular="0.1"
+     position="0 -1.9 0" rotation="90 0 0" scale="2 2 0.2"></a-torus>
+    <a-torus color="grey" arc="270" radius="6" radius-tubular="0.1"
+     position="0 -1.9 0" rotation="90 30 0" scale="2.5 2.5 0.2"></a-torus>
+    <a-torus color="grey" arc="270" radius="6" radius-tubular="0.1"
+     position="0 -1.9 0" rotation="90 -180 0" scale="3 3 0.2"></a-torus>
+    
+    
+
+
+      <!-- ----------------------- MAP RESERVAS ----------------------- -->
+  <a-entity position="0 7 -28" rotation="-30 0 0" scale="0.9 0.9 0.9">
+
+    <!-- MAP MODEL -->
+    <a-entity position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.1"
+    gltf-model="assets/models/map.glb"
+    ></a-entity>
+    <a-box position="0 0 -1,6" color="#94CBE1" scale="30 20 1" opacity="0.7"></a-box>
+    <a-text position="0 12 1" rotation="40 0 0" scale="3 3 3" font="assets/font/YanoneKaffeesatz-Bold-msdf.json" 
+    negate="false" color="black" align="center" width="10" wrap-count="30" 
+    value="Reservas Ornitologicas"></a-text>
+
+    <!-- MAP POINTS -->
+    <a-entity position="0.766 9.416 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon1" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb" data-text="Reserva Ornitológica Parque de Las Llamas (Santander)"></a-entity>
+    <a-entity position="-3.267 7.495 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon2" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="8.066 3.647 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon3" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="-0.878 3.818 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon4" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="-4.976 -8.670 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon5" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="-3.578 7.495 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon6" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="6.067 5.295 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon7" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="7.262 5.602 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon8" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="-6.876 7.793 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon9" class="clickable" 
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="1.115 2.896 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon10" class="clickable"
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="6.248 1.089 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon11" class="clickable"
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="0.678 9.366 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon12" class="clickable"
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+    <a-entity position="8.210 3.647 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon13" class="clickable"
+    gltf-model="assets/models/map_pointer.glb"></a-entity>
+
+    <!-- HIDE TEXT -->
+    <a-entity id="info-text" visible="false" position="-10 0 1" rotation="30 0 0" scale="0.65 0.65 0.65" >
+        <a-plane color="#ffffff" width="12" height="2"></a-plane>
+        <a-text font="assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" 
+        color="black" align="center" width="10" wrap-count="30"></a-text>
+    </a-entity>
+  </a-entity>
+
+  <script>
+        const infoText = document.querySelector('#info-text');
+      
+        // Agrega un evento de clic a todos los elementos con la clase "clickable"
+        const clickableElements = document.querySelectorAll('.clickable');
+      
+        clickableElements.forEach((element, index) => {
+          element.addEventListener('click', () => {
+            const textValue = obtenerTextoReservas(index + 1); 
+            //console.log(element.getAttribute('data-text'))
+            //console.log(element.getAttribute('position'))
+            //const fixedPosition = element.getAttribute('position')
+            const fixedPosition = {...element.getAttribute('position')}
+            const fixedPosition2 = fixedPosition.z + 0.4
+            fixedPosition.z = fixedPosition2
+            if (!infoText.getAttribute('visible')) {
+              infoText.setAttribute('visible', true);
+              infoText.setAttribute('position', fixedPosition);
+              infoText.querySelector('a-text').setAttribute('value', textValue);
+            } else {
+              infoText.setAttribute('visible', false);
+            }
+          });
+        });
+      
+        // Función para obtener el texto adecuado para cada modelo
+        function obtenerTextoReservas(modeloId) {
+          // Aquí debes implementar la lógica para obtener el texto correcto
+          // Puedes usar un switch o un objeto con los textos correspondientes
+          switch (modeloId) {
+            case 1:
+                return "Reserva Ornitológica Parque de Las Llamas (Santander)";
+            case 2:
+                return "Reserva Ornitológica de Valdavido (León)";
+            case 3:
+                return "Reserva Ornitológica de Riet Vell (Tarragona)";
+            case 4:
+                return "Reserva Ornitológica de La Laguna de El Oso (Ávila)";
+            case 5:
+                return "Reserva Ornitológica del Cercado de El Jarde (Fuerteventura)";
+            case 6:
+                return "Reserva Ornitológica de Palacios de Compludo (León)";
+            case 7:
+                return "Reserva Ornitológica de El Planerón (Zaragoza)";
+            case 8:
+                return "Reserva Ornitológica de la Finca de San Miguel (Huesca)";
+            case 9:
+                return "Reserva Ornitológica de O Grove (Pontevedra)";
+            case 10:
+                return "Reserva Ornitológica Los Albardales (Madrid)";
+            case 11:
+                return "Reserva Ornitológica Tancat de la Pipa (Valencia)";
+            case 12:
+                return "Reserva Ornitológica de las Marismas Blancas (Cantabria)";
+            case 13:
+                return "Reserva Ornitológica de El Clot (Tarragona)";
+            default:
+                return "Número de modelo 3D no válido.";
+            }
+
+        }
+  </script>
+
+
+      <!-- ----------------------- MAP Delegaciones y oficinas tecnicas ----------------------- -->
+      <a-entity position="0 7 28" rotation="-30 180 0" scale="0.9 0.9 0.9">
+
+        <!-- MAP MODEL -->
+        <a-entity position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.1"
+        gltf-model="assets/models/map.glb"
         ></a-entity>
-     
+        <a-box position="0 0 -1,6" color="#94CBE1" scale="30 20 1" opacity="0.7"></a-box>
+        <a-text position="0 12 1" rotation="40 0 0" scale="3 3 3" font="assets/font/YanoneKaffeesatz-Bold-msdf.json" 
+        negate="false" color="black" align="center" width="10" wrap-count="30" 
+        value="Delegaciones y Oficinas Tecnicas"></a-text>
 
+        <!-- MAP POINTS -->
+        <a-entity position="0.755 3.301 0.8" rotation="50 0 0" scale="0.19 0.19 0.19" id="icon14" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Sede Central, C/Melquiades Biencinto, 34 (Madrid)"></a-entity>
+        <a-entity position="-3.114 -2.902 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon15" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="5.479 5.939 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon16" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="8.066 3.861 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon17" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-0.967 9.565 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon18" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-9.995 -8.354 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon19" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="0.887 9.631 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon20" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="10.215 5.425 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon21" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="6.248 1.279 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon22" class="clickable-dos" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-3.436 1.630 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon23" class="clickable-dos"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="2.791 8.263 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon24" class="clickable-dos"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-4.004 -3.345 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon25" class="clickable-dos"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
         
-        <!-- OCULUS CONTROLLERS -->
-        <!--
-        <a-entity id="cameraRig">
-            <a-entity camera position="0 1.6 0">
-            <a-text id="message" position="-1 2 -3" color="white" align="center" value=""></a-text>
-            </a-entity>
-            <a-entity oculus-touch-controls="hand: left"
-                    collider-check raycaster="objects: .collidable; showLine: true"
-                    thumbstick-logging></a-entity>
-            <a-entity oculus-touch-controls="hand: right"
-                    collider-check raycaster="objects: .collidable; showLine: true"
-                    thumbstick-logging></a-entity>
-        </a-entity> -->
-            
 
-        
-        <!-- -------------------------------------- CLOUDS --------------------------------------- -->
-        <a-entity class="all-clouds">
-                    <!-- --------------------------------- LEFT CLOUDS --------------------------------- -->   
-                    <!-- --------------------------------- LEFT CLOUDS --------------------------------- -->   
-                    
-                    <a-entity>
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 1.5 20"
-                            rotation="0.5 25 0" 
-                            scale="0.7 0.7 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                    
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 -1.5 10"
-                            rotation="0.5 25 0" 
-                            scale="0.5 0.5 0.5"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 2.5 0"
-                            rotation="0.5 25 0" 
-                            scale="0.7 0.7 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-4.5 1.5 -10"
-                            rotation="0.5 25 0" 
-                            scale="1 1 1"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 -1.5 -20"
-                            rotation="0.5 25 0" 
-                            scale="0.5 0.5 0.5"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 2.5 -30"
-                            rotation="0.5 25 0" 
-                            scale="0.5 0.5 0.5"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-4.5 1.5 -40"
-                            rotation="0.5 25 0" 
-                            scale="1 1 1"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 -1.5 -50"
-                            rotation="0.5 25 0" 
-                            scale="0.5 0.5 0.5"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-left" class="cloud" 
-                            position="-3.5 2.5 -60"
-                            rotation="0.5 25 0" 
-                            scale="0.5 0.5 0.5"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                    </a-entity>
-                    
-                    <!-- --------------------------------- RIGHT CLUDS --------------------------------- -->   
-                    <!-- --------------------------------- RIGHT CLUDS --------------------------------- -->   
-                    <a-entity>
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 2.5 25"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 1.5 15"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 -1.5 5"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 2.5 -5"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 1.5 -15"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                    
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 -1.5 -25"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="4.5 2.5 -35"
-                            rotation="0.5 -25 0" 
-                            scale="1 1 1"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 1.5 -45"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 -1.5 -55"
-                            rotation="0.5 -25 0" 
-                            scale="0.8 0.8 0.8"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-right" class="cloud" 
-                            position="3.5 2.5 -65"
-                            rotation="0.5 -25 0" 
-                            scale="1 1 1"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                    </a-entity>  
-                    
-                    <!-- --------------------------------- TOP CLUDS --------------------------------- --> 
-                    <!-- --------------------------------- TOP CLUDS --------------------------------- -->   
-                    <a-entity>
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="-5 6 20"
-                            rotation="90 0 0" 
-                            scale="1.3 0.8 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                        
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="-11 3 10"
-                            rotation="90 0 0" 
-                            scale="1.3 0.6 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="1 6 0"
-                            rotation="90 0 0" 
-                            scale="1.3 0.8 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                        
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="14 3 -10"
-                            rotation="90 0 0" 
-                            scale="1 0.6 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="-6 6 -20"
-                            rotation="90 0 0" 
-                            scale="1.5 0.8 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                        
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="-13.3 3 -30"
-                            rotation="90 0 0" 
-                            scale="1.2 1 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="2 6 -40"
-                            rotation="90 0 0" 
-                            scale="1.3 0.8 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                        
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="12.5 3 -50"
-                            rotation="90 0 0" 
-                            scale="1 0.6 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="0 3 -60"
-                            rotation="90 0 0" 
-                            scale="1.3 0.8 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                        
-                    <a-entity 
-                            class="cloud-top" class="cloud" 
-                            position="-6.5 4 -70"
-                            rotation="90 0 0" 
-                            scale="1 0.6 0.7"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                    </a-entity> 
-                        
-                    <!-- --------------------------------- BOTTOM CLUDS --------------------------------- -->  
-                    <!-- --------------------------------- BOTTOM CLUDS --------------------------------- -->   
-                    <a-entity>
-                            <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="-5 -6 20"
-                                rotation="90 0 0" 
-                                scale="1.3 0.8 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                            
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="-11 -3 10"
-                                rotation="90 0 0" 
-                                scale="1.3 0.6 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                    
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="1 -6 0"
-                                rotation="90 0 0" 
-                                scale="1.3 0.8 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                            
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="14 -3 -10"
-                                rotation="90 0 0" 
-                                scale="1 0.6 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                    
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="-6 -6 -20"
-                                rotation="90 0 0" 
-                                scale="1.5 0.8 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                            
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="-13.3 -3 -30"
-                                rotation="90 0 0" 
-                                scale="1.2 1 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                    
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="2 -6 -40"
-                                rotation="90 0 0" 
-                                scale="1.3 0.8 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                            
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="12.5 -3 -50"
-                                rotation="90 0 0" 
-                                scale="1 0.6 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                    
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="0 -3 -60"
-                                rotation="90 0 0" 
-                                scale="1.3 0.8 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                            
-                        <a-entity 
-                                class="cloud-bottom" class="cloud" 
-                                position="-6.5 -4 -70"
-                                rotation="90 0 0" 
-                                scale="1 0.6 0.7"  
-                                gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                        ></a-entity>
-                    </a-entity>  
-                
-                    <!-- --------------------------------- BIG CLUDS --------------------------------- -->  
-                    <!-- --------------------------------- BIG CLUDS --------------------------------- -->  
-                    <a-entity>
-                    <a-entity 
-                            class="cloud-big" class="cloud" 
-                            position="10 0 20"
-                            rotation="0 -40 0" 
-                            scale="3 2 3"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-big" class="cloud" 
-                            position="-10 0 0"
-                            rotation="0 40 0" 
-                            scale="3 2 3"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-big" class="cloud" 
-                            position="10 0 -20"
-                            rotation="0 -40 0" 
-                            scale="3 2 3"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-big" class="cloud" 
-                            position="-10 0 -40"
-                            rotation="0 40 0" 
-                            scale="3 2 3"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                
-                    <a-entity 
-                            class="cloud-big" class="cloud" 
-                            position="10 0 -60"
-                            rotation="0 -40 0" 
-                            scale="3 2 3"  
-                            gltf-model="https://cdn.glitch.global/c8b88331-b2b7-409f-a5ce-6a8e452684e8/cloud_test.glb?v=1692952144549"
-                    ></a-entity>
-                    </a-entity>
+        <!-- HIDE TEXT -->
+        <a-entity id="info-text-dos" visible="false" position="-10 0 1" rotation="30 0 0" scale="0.65 0.65 0.65">
+            <a-plane color="#ffffff" width="12" height="2"></a-plane>
+            <a-text font="assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" 
+            color="black" align="center" width="10" wrap-count="30"></a-text>
         </a-entity>
-        <!-- -------------------------------------- BIRDS ---------------------------------------- -->
-        <a-entity class="all-birds">
-                    <a-entity id="birds" position="-6 -2.5 16" rotation="0 0 0" scale="4 4 4" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
+      </a-entity>
 
-                    <a-entity>
-                        <a-entity id="birds" position="8 -1.5 8" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-6 2.5 0" rotation="0 0 0" scale="2 2 2" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
+      <script>
+            const infoTextDos = document.querySelector('#info-text-dos');
+          
+            // Agrega un evento de clic a todos los elementos con la clase "clickable"
+            const clickableElementsDos = document.querySelectorAll('.clickable-dos');
+          
+            clickableElementsDos.forEach((element, index) => {
+              element.addEventListener('click', () => {
+                const textValue = obtenerTextoDelegaciones(index + 1); 
+                //console.log(element.getAttribute('data-text'))
+                //console.log(element.getAttribute('position'))
+                //const fixedPosition = element.getAttribute('position')
+                const fixedPosition = {...element.getAttribute('position')}
+                const fixedPosition2 = fixedPosition.z + 0.4
+                fixedPosition.z = fixedPosition2 
+                if (!infoTextDos.getAttribute('visible')) {
+                  infoTextDos.setAttribute('visible', true);
+                  infoTextDos.setAttribute('position', fixedPosition);
+                  infoTextDos.querySelector('a-text').setAttribute('value', textValue);
+                } else {
+                  infoTextDos.setAttribute('visible', false);
+                }
+              });
+            });
+          
+            // Función para obtener el texto adecuado para cada modelo
+            function obtenerTextoDelegaciones(modeloId) {
+              // Aquí debes implementar la lógica para obtener el texto correcto
+              // Puedes usar un switch o un objeto con los textos correspondientes
+              switch (modeloId) {
+                case 1:
+                    return "Sede Central, C/Melquiades Biencinto, 34 (Madrid)";
+                case 2:
+                    return "Sede de Andalucía,Universidad Pablo de Olavide Edificio Biblioteca (Sevilla)";
+                case 3:
+                    return "Sede de Aragón, Calle de Rioja (Zaragoza)";
+                case 4:
+                    return "Sede del Delta de L'Ebro, Carretera d'Amposta a Eucaliptus, km 18'5 (Tarragona)";
+                case 5:
+                    return "Sede de Ribadesella, Calle Hermanos Uría Aza, nº 3 (Asturias)";
+                case 6:
+                    return "Sede de Canarias, Calle Heraclio Sánchez, nº 21 (Tenerife)";
+                case 7:
+                    return "Sede de Cantabria, Centro de Estudios de las Marismas, Avda. de Chiclana 8 (Astillero)";
+                case 8:
+                    return "Sede de Catalunya, Calle de Murcia 2-8, local 13 (Barcelona)";
+                case 9:
+                    return "Sede de la Comunitat Valenciana, Calle Tavernes Blanques, 29 bajo (Valencia)";
+                case 10:
+                    return "Sede de Extremadura, Calle Ávila, 3 bajo (Cáceres)";
+                case 11:
+                    return "Sede de Euskadi, Casa de la Dehesa, Avenida de Olarizu (Vitoria)";
+                case 12:
+                    return "Sede de Doñana, Centro Ornitológico Francisco Bernis (Huelva)";
+                default:
+                    return "Número de modelo 3D no válido.";
+                }
 
-                    <a-entity id="birds" position="8 1.5 -8" rotation="0 0 0" scale="4 4 4" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <!-- <a-entity id="birds" position="-6 3.5 -16" rotation="0 0 0" scale="3 3 3" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity> -->
-                    
-                    <a-entity id="birds" position="8 -1.5 -24" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-6 2.5 -32" rotation="0 0 0" scale="4 4 4" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                
-                    <a-entity id="birds" position="8 -3.5 -40" rotation="0 0 0" scale="4 4 4" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-6 1.5 -48" rotation="0 0 0" scale="2 2 2" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="6 3.5 -56" rotation="0 0 0" scale="4 4 4" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-8 -2.5 -64" rotation="0 0 0" scale="3 3 3" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="6 -3.5 -72" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-8 3.5 -90" rotation="0 0 0" scale="2 2 2" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>
-                
-                    <a-entity id="birds" position="6 2.5 -138" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="/assets/models/birds.glb"
-                    ></a-entity>            
-            </a-entity>
-        </a-entity>
+            }
+      </script>
 
- 
     
-    </a-scene>
+    <!-- BACKGROUND -->
 
-</body>
+    <a-entity class="birds">
+      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+        <a-entity id="birds" position="50 20 0" rotation="0 0 60" scale="4 4 4" 
+        animation-mixer="action" play-all-model-animations modify-materials 
+        gltf-model="assets/models/birds.glb"></a-entity>
+        </a-entity>
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 -360 0; loop: true; dur: 30000">
+          <a-entity id="birds" position="-80 12 0" rotation="0 0 60" scale="2 2 2" 
+          animation-mixer="action" play-all-model-animations modify-materials 
+          gltf-model="assets/models/birds.glb"></a-entity>
+        </a-entity>
+
+      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000">
+          <a-entity id="birds" position="70 7 0" rotation="0 0 60" scale="5 5 5" 
+          animation-mixer="action" play-all-model-animations modify-materials 
+          gltf-model="assets/models/birds.glb"></a-entity>
+        </a-entity>
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 -360 0; loop: true; dur: 30000">
+          <a-entity id="birds" position="-100 -20 0" rotation="0 0 60" scale="2 2 2" 
+          animation-mixer="action" play-all-model-animations modify-materials 
+          gltf-model="assets/models/birds.glb"></a-entity>
+        </a-entity>
+      </a-entity>
+    </a-entity>
+    
+
+    </a-scene>
+  </body>
 </html>

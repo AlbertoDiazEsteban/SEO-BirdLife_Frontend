@@ -36,31 +36,31 @@ AFRAME.registerComponent('log', {
   });
 
 
-    AFRAME.addEventListener("thumbstickmoved", function(event) {
-    // Obtén la posición actual del pájaro
-    var birdPosition = document.querySelector("#main-bird").getAttribute("position");
+  //   AFRAME.addEventListener("thumbstickmoved", function(event) {
+  //   // Obtén la posición actual del pájaro
+  //   var birdPosition = document.querySelector("#main-bird").getAttribute("position");
 
-    // Actualiza la posición del pájaro según la dirección del thumbstick
-    if (event.detail.y > 0.95) {
-      // Mueve el pájaro hacia arriba
-      birdPosition.y += 0.05;
-    }
-    if (event.detail.y < -0.95) {
-      // Mueve el pájaro hacia abajo
-      birdPosition.y -= 0.05;
-    }
-    if (event.detail.x < -0.95) {
-      // Mueve el pájaro hacia la izquierda
-      birdPosition.x -= 0.05;
-    }
-    if (event.detail.x > 0.95) {
-      // Mueve el pájaro hacia la derecha
-      birdPosition.x += 0.05;
-    }
+  //   // Actualiza la posición del pájaro según la dirección del thumbstick
+  //   if (event.detail.y > 0.95) {
+  //     // Mueve el pájaro hacia arriba
+  //     birdPosition.y += 0.05;
+  //   }
+  //   if (event.detail.y < -0.95) {
+  //     // Mueve el pájaro hacia abajo
+  //     birdPosition.y -= 0.05;
+  //   }
+  //   if (event.detail.x < -0.95) {
+  //     // Mueve el pájaro hacia la izquierda
+  //     birdPosition.x -= 0.05;
+  //   }
+  //   if (event.detail.x > 0.95) {
+  //     // Mueve el pájaro hacia la derecha
+  //     birdPosition.x += 0.05;
+  //   }
 
-    // Actualiza la posición del pájaro
-    document.querySelector("#main-bird").setAttribute("position", birdPosition);
-  });
+  //   // Actualiza la posición del pájaro
+  //   document.querySelector("#main-bird").setAttribute("position", birdPosition);
+  // });
 
   // AFRAME.addEventListener("keydown", function(event) {
   //   // Obtén la posición actual del pájaro

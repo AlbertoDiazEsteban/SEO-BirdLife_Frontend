@@ -1,0 +1,105 @@
+a-scene {
+    position: relative; /* Agrega posición relativa para que z-index funcione */
+    z-index: 0;  
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btn-mas{
+    display: none;
+} 
+
+.container{
+    position: fixed;
+    bottom: -5px;
+    left: 20px;
+    z-index: 10;
+}
+.redes a {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+.redes a img {
+    position: relative;
+    line-height: 51px;
+    z-index: 3;
+}
+.redes a svg {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    background: #cc2b2b00;
+    color: #ffffff00;
+    width: 51px; 
+    height: 51px;
+    margin-top: 9.5px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 17px rgba(26, 35, 46, 0.6);
+    transition: all 500ms ease;
+}
+.redes a img, .btn-mas label{
+    display: block;
+    text-decoration: none;
+    background: #cc2b2b00;
+    color: #ffffff00;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 500ms ease;
+}
+.redes a img:hover{
+    transform: scale(1.15);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-mas img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-bottom: -67px;
+}
+.btn-mas label{
+    cursor: pointer;
+    background: #ffffff00;
+    color: rgba(0, 0, 255, 0);
+    width: 90px;
+    height: 90px;
+    font-size: 23px;
+}
+#btn-mas:checked ~ .btn-mas label{
+    transform: rotate(135deg);
+    font-size: 25px;
+}
+#btn-mas:checked ~ .redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: margin-bottom 0.35s ease, opacity 0.35s ease, visibility 0.35s ease;
+}
+#btn-mas:not(:checked) ~ .redes a {
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: margin-bottom 0.35s ease, opacity 0.35s ease, visibility 0.35s ease; /* Agrega la transición para cerrar los iconos */
+}
+
+
+  
