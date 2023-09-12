@@ -5,7 +5,7 @@
 "SEO Bird Life" es una experiencia interactiva desarrollada con A-Frame que combina elementos de gráficos, datos, mapas interactivos y una escena nocturna para resaltar los hitos de la empresa. Este proyecto está diseñado para proporcionar una experiencia envolvente y atractiva para los usuarios y presenta múltiples páginas.
 
             
-<img src="http://www.asociacionparquedunar.org/575-medium_default/seo-birdlife.jpg">
+            <img src="http://www.asociacionparquedunar.org/575-medium_default/seo-birdlife.jpg">
 
 # Participantes del Proyecto
 
@@ -18,7 +18,8 @@
 
 ## Descripción
 
-1.  **Entrada a la pagina principal**: La primera página es una entrada que facilita e acceso a cada una de las experiencias .
+1.  **Entrada a la pagina principal**: La primera página es una entrada que facilita e acceso a cada una de las experiencias .                                    (assets/img/index.png)
+
     
 2.  **Escena de Gráficos y Datos**: La segunda página presenta una escena interactiva con gráficos y datos relevantes.
     
