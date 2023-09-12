@@ -18,9 +18,8 @@
 
 ## Descripción
 
-1.  **Entrada a la pagina principal**: La primera página es una entrada que facilita e acceso a cada una de las experiencias .                                    (assets/img/index.png)
-
-    
+1.  **Entrada a la pagina principal**: La primera página es una entrada que facilita e acceso a cada una de las experiencias .                                
+  
 2.  **Escena de Gráficos y Datos**: La segunda página presenta una escena interactiva con gráficos y datos relevantes.
     
 3.  **Escena de Mapas Interactivos**: La tercera página ofrece un conjunto de mapas interactivos que los usuarios pueden explorar para obtener información adicional.
