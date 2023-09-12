@@ -1,3 +1,7 @@
+#  SEO Bird Life - Proyecto de Experiencia en A-Frame
+
+"SEO Bird Life" es una experiencia interactiva desarrollada con A-Frame que combina elementos de gráficos, datos, mapas interactivos y una escena nocturna para resaltar los hitos de la empresa. Este proyecto está diseñado para proporcionar una experiencia envolvente y atractiva para los usuarios y presenta múltiples páginas.
+
 # Participantes del Proyecto
 
 -   **Scrum Master**: Santiago Andrade
@@ -6,17 +10,6 @@
     -   Bea Mendez
     -   Johan Gonzales
     -   Mariama Salhi
-
-
-#  SEO Bird Life - Proyecto de Experiencia en A-Frame
-
-<img src="http://www.asociacionparquedunar.org/575-medium_default/seo-birdlife.jpg">
-
-
-
-
-
-"SEO Bird Life" es una experiencia interactiva desarrollada con A-Frame que combina elementos de gráficos, datos, mapas interactivos y una escena nocturna para resaltar los hitos de la empresa. Este proyecto está diseñado para proporcionar una experiencia envolvente y atractiva para los usuarios y presenta múltiples páginas.
 
 ## Descripción
 
@@ -63,4 +56,3 @@ Hemos tomado inspiración de las siguientes páginas y proyectos:
 -   [Ejemplo de Página A-Frame](https://chat.openai.com/c/enlace_a_ejemplo1)
 -   [Proyecto de Experiencia Interactiva](https://chat.openai.com/c/enlace_a_ejemplo2)
 -   [Referencia de Usabilidad Móvil](https://chat.openai.com/c/enlace_a_ejemplo3)
-
