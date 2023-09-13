@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;500;700&display=swap');
+
 a-scene {
     position: relative; /* Agrega posición relativa para que z-index funcione */
     z-index: 0;  
@@ -25,6 +27,15 @@ a-scene {
     flex-direction: column;
     align-items: center; 
     text-align: center;
+    text-decoration: none;
+}
+.redes a p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333333;
+    text-shadow: 0px 0px 18px rgb(255, 255, 255);
 }
 .redes a img {
     position: relative;

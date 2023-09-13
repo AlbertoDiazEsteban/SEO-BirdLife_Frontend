@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    background: linear-gradient(180deg, #638294 0%, #2E3B42 100%);   
+    overflow: hidden;
+    }
+    #stars i {
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 90px #fff;
+    animation: animate 5s linear infinite;
+    z-index: -10;
+    }
+    @keyframes animate {
+    5% { opacity: 0.05; }
+    50% { opacity: 0.50; }
+    75% { opacity: 0.65; }
+    100% { opacity: 1; }
+    }
+    .menu-navegacion {
+            display: none;
+    }
+    @media only screen and (max-width: 768px) {
+    .menu-navegacion {
+            display: flex;
+    }
+    }
+    @media only screen and (max-width: 768px) {
+    .menu-navegacion {
+            display: flex;
+    }
+    }

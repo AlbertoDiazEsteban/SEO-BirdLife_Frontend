@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/menu.css">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 
-    <script src="assets/js/navigation-menu.js"></script>
+    <script src="assets/js/navigation-menu-birdless.js"></script>
     <link rel="stylesheet" href="assets/css/navegacion-menu.css">
 
   </head>
@@ -30,28 +30,32 @@
       <input type="checkbox" id="btn-mas">
       <div class="redes">
           <a href="sky-3.html" class="hitos">
-              <img src="assets/img/button/hitos.svg" alt="logo icono hitos">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
               </svg>
+              <img src="assets/img/button/hitos.svg" alt="logo icono hitos">
+              <p>Hitos</p>
           </a>
           <a href="sky-1.html" class="datos">
-              <img src="assets/img/button/datos.svg" alt="logo icono datos">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.7"/>
               </svg>
+              <img src="assets/img/button/datos.svg" alt="logo icono datos">
+              <p>Datos</p>
           </a>
           <a href="sky-2.html" class="mapas">
-              <img src="assets/img/button/mapas.svg" alt="logo icono mapas">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
               </svg>
+              <img src="assets/img/button/mapas.svg" alt="logo icono mapas">
+              <p>Mapas</p>
           </a>
           <a href="https://seo.org/" class="seobirdlife">
-              <img src="assets/img/button/seo.svg" alt="logo icono datos">
               <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
               </svg>
+              <img src="assets/img/button/seo.svg" alt="logo icono datos">
+              <p>SEO-BirdLife</p>
           </a>
       </div>
       <div class="btn-mas">
@@ -64,10 +68,10 @@
     <!-- MENÚ NAVEGACIÓN EN RESPONSIVE -->
     <div class="menu-navegacion">
       <div class=" lft-rgt">
-          <button type="button" class="btn-mov btn-lft" onclick="moveCameraLeft">
+          <button type="button" class="btn-mov btn-lft">
             <img src="assets/img/button/nav-left.svg" alt="derecha">
           </button>
-          <button type="button" class="btn-mov btn-rgt" onclick="moveCameraRight">
+          <button type="button" class="btn-mov btn-rgt">
             <img src="assets/img/button/nav-right.svg" alt="izquierda">
           </button>
       </div>
@@ -75,14 +79,11 @@
           <button type="button" class="btn-mov btn-up">
             <img src="assets/img/button/nav-up.svg" alt="arriba">
           </button>
-          <button type="button" class="btn-mov btn-down" onclick="moveCameraDown">
+          <button type="button" class="btn-mov btn-down">
             <img src="assets/img/button/nav-down.svg" alt="abajo">
           </button>
       </div>
     </div>
-
-
-
 
 
     <!-- ----------------------- ENVIROMENT ----------------------- -->
@@ -121,119 +122,119 @@
 
 
       <!-- ----------------------- MAP RESERVAS ----------------------- -->
-  <a-entity position="0 7 -28" rotation="-30 0 0" scale="0.9 0.9 0.9">
+      <a-entity position="0 7 -28" rotation="-30 0 0" scale="0.9 0.9 0.9">
 
-    <!-- MAP MODEL -->
-    <a-entity position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.1"
-    gltf-model="assets/models/map.glb"
-    ></a-entity>
-    <a-box position="0 0 -1,6" color="#94CBE1" scale="30 20 1" opacity="0.7"></a-box>
-    <a-text position="0 12 1" rotation="40 0 0" scale="3 3 3" font="assets/font/YanoneKaffeesatz-Bold-msdf.json" 
-    negate="false" color="black" align="center" width="10" wrap-count="30" 
-    value="Reservas Ornitologicas"></a-text>
+        <!-- MAP MODEL -->
+        <a-entity position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.1"
+        gltf-model="assets/models/map.glb"
+        ></a-entity>
+        <a-box position="0 0 -1,6" color="#94CBE1" scale="30 20 1" opacity="0.7"></a-box>
+        <a-text position="0 12 1" rotation="40 0 0" scale="3 3 3" font="assets/font/YanoneKaffeesatz-Bold-msdf.json" 
+        negate="false" color="black" align="center" width="10" wrap-count="30" 
+        value="Reservas Ornitologicas"></a-text>
 
-    <!-- MAP POINTS -->
-    <a-entity position="0.766 9.416 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon1" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb" data-text="Reserva Ornitológica Parque de Las Llamas (Santander)"></a-entity>
-    <a-entity position="-3.267 7.495 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon2" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="8.066 3.647 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon3" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="-0.878 3.818 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon4" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="-4.976 -8.670 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon5" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="-3.578 7.495 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon6" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="6.067 5.295 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon7" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="7.262 5.602 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon8" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="-6.876 7.793 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon9" class="clickable" 
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="1.115 2.896 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon10" class="clickable"
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="6.248 1.089 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon11" class="clickable"
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="0.678 9.366 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon12" class="clickable"
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
-    <a-entity position="8.210 3.647 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon13" class="clickable"
-    gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <!-- MAP POINTS -->
+        <a-entity position="0.766 9.416 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon1" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Reserva Ornitológica Parque de Las Llamas (Santander)"></a-entity>
+        <a-entity position="-3.267 7.495 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon2" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="8.066 3.647 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon3" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-0.878 3.818 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon4" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-4.976 -8.670 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon5" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-3.578 7.495 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon6" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="6.067 5.295 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon7" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="7.262 5.602 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon8" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="-6.876 7.793 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon9" class="clickable" 
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="1.115 2.896 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon10" class="clickable"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="6.248 1.089 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon11" class="clickable"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="0.678 9.366 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon12" class="clickable"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
+        <a-entity position="8.210 3.647 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" id="icon13" class="clickable"
+        gltf-model="assets/models/map_pointer.glb"></a-entity>
 
-    <!-- HIDE TEXT -->
-    <a-entity id="info-text" visible="false" position="-10 0 1" rotation="30 0 0" scale="0.65 0.65 0.65" >
-        <a-plane color="#ffffff" width="12" height="2"></a-plane>
-        <a-text font="assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" 
-        color="black" align="center" width="10" wrap-count="30"></a-text>
-    </a-entity>
-  </a-entity>
+        <!-- HIDE TEXT -->
+        <a-entity id="info-text" visible="false" position="-10 0 1" rotation="30 0 0" scale="0.65 0.65 0.65" >
+            <a-plane color="#ffffff" width="12" height="2"></a-plane>
+            <a-text font="assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" 
+            color="black" align="center" width="10" wrap-count="30"></a-text>
+        </a-entity>
+      </a-entity>
 
-  <script>
-        const infoText = document.querySelector('#info-text');
-      
-        // Agrega un evento de clic a todos los elementos con la clase "clickable"
-        const clickableElements = document.querySelectorAll('.clickable');
-      
-        clickableElements.forEach((element, index) => {
-          element.addEventListener('click', () => {
-            const textValue = obtenerTextoReservas(index + 1); 
-            //console.log(element.getAttribute('data-text'))
-            //console.log(element.getAttribute('position'))
-            //const fixedPosition = element.getAttribute('position')
-            const fixedPosition = {...element.getAttribute('position')}
-            const fixedPosition2 = fixedPosition.z + 0.4
-            fixedPosition.z = fixedPosition2
-            if (!infoText.getAttribute('visible')) {
-              infoText.setAttribute('visible', true);
-              infoText.setAttribute('position', fixedPosition);
-              infoText.querySelector('a-text').setAttribute('value', textValue);
-            } else {
-              infoText.setAttribute('visible', false);
+      <script>
+            const infoText = document.querySelector('#info-text');
+          
+            // Agrega un evento de clic a todos los elementos con la clase "clickable"
+            const clickableElements = document.querySelectorAll('.clickable');
+          
+            clickableElements.forEach((element, index) => {
+              element.addEventListener('click', () => {
+                const textValue = obtenerTextoReservas(index + 1); 
+                //console.log(element.getAttribute('data-text'))
+                //console.log(element.getAttribute('position'))
+                //const fixedPosition = element.getAttribute('position')
+                const fixedPosition = {...element.getAttribute('position')}
+                const fixedPosition2 = fixedPosition.z + 0.4
+                fixedPosition.z = fixedPosition2
+                if (!infoText.getAttribute('visible')) {
+                  infoText.setAttribute('visible', true);
+                  infoText.setAttribute('position', fixedPosition);
+                  infoText.querySelector('a-text').setAttribute('value', textValue);
+                } else {
+                  infoText.setAttribute('visible', false);
+                }
+              });
+            });
+          
+            // Función para obtener el texto adecuado para cada modelo
+            function obtenerTextoReservas(modeloId) {
+              // Aquí debes implementar la lógica para obtener el texto correcto
+              // Puedes usar un switch o un objeto con los textos correspondientes
+              switch (modeloId) {
+                case 1:
+                    return "Reserva Ornitológica Parque de Las Llamas (Santander)";
+                case 2:
+                    return "Reserva Ornitológica de Valdavido (León)";
+                case 3:
+                    return "Reserva Ornitológica de Riet Vell (Tarragona)";
+                case 4:
+                    return "Reserva Ornitológica de La Laguna de El Oso (Ávila)";
+                case 5:
+                    return "Reserva Ornitológica del Cercado de El Jarde (Fuerteventura)";
+                case 6:
+                    return "Reserva Ornitológica de Palacios de Compludo (León)";
+                case 7:
+                    return "Reserva Ornitológica de El Planerón (Zaragoza)";
+                case 8:
+                    return "Reserva Ornitológica de la Finca de San Miguel (Huesca)";
+                case 9:
+                    return "Reserva Ornitológica de O Grove (Pontevedra)";
+                case 10:
+                    return "Reserva Ornitológica Los Albardales (Madrid)";
+                case 11:
+                    return "Reserva Ornitológica Tancat de la Pipa (Valencia)";
+                case 12:
+                    return "Reserva Ornitológica de las Marismas Blancas (Cantabria)";
+                case 13:
+                    return "Reserva Ornitológica de El Clot (Tarragona)";
+                default:
+                    return "Número de modelo 3D no válido.";
+                }
+
             }
-          });
-        });
-      
-        // Función para obtener el texto adecuado para cada modelo
-        function obtenerTextoReservas(modeloId) {
-          // Aquí debes implementar la lógica para obtener el texto correcto
-          // Puedes usar un switch o un objeto con los textos correspondientes
-          switch (modeloId) {
-            case 1:
-                return "Reserva Ornitológica Parque de Las Llamas (Santander)";
-            case 2:
-                return "Reserva Ornitológica de Valdavido (León)";
-            case 3:
-                return "Reserva Ornitológica de Riet Vell (Tarragona)";
-            case 4:
-                return "Reserva Ornitológica de La Laguna de El Oso (Ávila)";
-            case 5:
-                return "Reserva Ornitológica del Cercado de El Jarde (Fuerteventura)";
-            case 6:
-                return "Reserva Ornitológica de Palacios de Compludo (León)";
-            case 7:
-                return "Reserva Ornitológica de El Planerón (Zaragoza)";
-            case 8:
-                return "Reserva Ornitológica de la Finca de San Miguel (Huesca)";
-            case 9:
-                return "Reserva Ornitológica de O Grove (Pontevedra)";
-            case 10:
-                return "Reserva Ornitológica Los Albardales (Madrid)";
-            case 11:
-                return "Reserva Ornitológica Tancat de la Pipa (Valencia)";
-            case 12:
-                return "Reserva Ornitológica de las Marismas Blancas (Cantabria)";
-            case 13:
-                return "Reserva Ornitológica de El Clot (Tarragona)";
-            default:
-                return "Número de modelo 3D no válido.";
-            }
-
-        }
-  </script>
+      </script>
 
 
       <!-- ----------------------- MAP Delegaciones y oficinas tecnicas ----------------------- -->
-      <a-entity position="0 7 28" rotation="-30 180 0" scale="0.9 0.9 0.9">
+      <a-entity position="-25 7 11" rotation="-30 115 0" scale="0.9 0.9 0.9">
 
         <!-- MAP MODEL -->
         <a-entity position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.1"
@@ -338,6 +339,234 @@
                 }
 
             }
+      </script>
+
+
+      <!-- ----------------------- MAP Grupos Locales ----------------------- -->
+      <a-entity position="25 7 11" rotation="-30 -115 0" scale="0.9 0.9 0.9">
+
+        <!-- MAP MODEL -->
+        <a-entity position="0 0 0" rotation="0 0 0" scale="43.5 43.5 9"
+        gltf-model="assets/models/map-full.glb"
+        ></a-entity>
+        <a-box position="0 0 -1,6" color="#94CBE1" scale="30 20 1" opacity="0.7"></a-box>
+        <a-text position="0 12 1" rotation="40 0 0" scale="3 3 3" font="assets/font/YanoneKaffeesatz-Bold-msdf.json" 
+        negate="false" color="black" align="center" width="10" wrap-count="30" 
+        value="Grupos Locales"></a-text>
+
+        <!-- MAP POINTS -->
+        <a-entity position="-6.779 8.023 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-PONTEVEDRA (Galicia)"></a-entity>
+        <a-entity position="0.887 9.491 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CANTABRIA"></a-entity>
+        <a-entity position="1.697 9.241 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CASTRO (Bilbao)"></a-entity>
+        <a-entity position="2.537 8.716 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-BETSAIDE (Vitoria)"></a-entity>
+        <a-entity position="3.709 9.241 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-DONOSTIA (Pais Vasco)"></a-entity>
+        <a-entity position="5.953 6.910 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-HUESCA (Aragon)"></a-entity>
+        <a-entity position="5.113 5.790 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-ZARAGOZA (Aragon)"></a-entity>
+        <a-entity position="5.113 2.923 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-TERUEL (Aragon)"></a-entity>
+        <a-entity position="10.008 5.343 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-BARCELONA (Catalunya)"></a-entity>
+        <a-entity position="2.891 5.873 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SORIA (Castilla y Leon)"></a-entity>
+        <a-entity position="-0.845 5.703 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-VALLADOLID (Castilla y Leon)"></a-entity>
+        <a-entity position="0.212 4.459 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SEGOVIA (Castilla y Leon)"></a-entity>
+        <a-entity position="-0.838 3.728 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-AVILA (Castilla y Leon)"></a-entity>
+        <a-entity position="-2.223 4.473 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SALAMANCA (Castilla y Leon)"></a-entity>
+        <a-entity position="0.872 4.473 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SIERRA NORTE DE MADRID (Madrid)"></a-entity>
+        <a-entity position="0.006 3.602 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SIERRA DE GUADARRAMA (Madrid)"></a-entity>
+        <a-entity position="0.845 3.587 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-MONTICOLA (Madrid)"></a-entity>
+        <a-entity position="0.676 3.380 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-ALECTORIS (Madrid)"></a-entity>
+        <a-entity position="0.556 3.105 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-VANELLUS (Madrid)"></a-entity>
+        <a-entity position="1.099 2.744 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-ARANJUEZ (Madrid)"></a-entity>
+        <a-entity position="-0.897 2.260 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-TALAVERA (Castilla la Mancha)"></a-entity>
+        <a-entity position="0.265 0.223 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CIUDAD REAL (Castilla la Mancha)"></a-entity>
+        <a-entity position="6.792 2.330 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CASTELLON (Comunitat Valenciana)"></a-entity>
+        <a-entity position="6.248 0.875 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres" 
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-ARDEA Valencia (Comunitat Valenciana)"></a-entity>
+        <a-entity position="6.143 -1.466 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-ALICANTE (Comunitat Valenciana)"></a-entity>
+        <a-entity position="10.945 1.522 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-VIROT BALEARS (Isla de Mayorca)"></a-entity>
+        <a-entity position="-3.047 2.526 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CACERES (Extremadura)"></a-entity>
+        <a-entity position="-4.712 0.130 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-BADAJOZ (Extremadura)"></a-entity>
+        <a-entity position="-4.653 -3.182 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-HUELVA (Andalucia)"></a-entity>
+        <a-entity position="-3.096 -2.901 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SEVILLA (Andalucia)"></a-entity>
+        <a-entity position="-3.660 -4.608 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CADIZ (Andalucia)"></a-entity>
+        <a-entity position="-1.523 -3.774 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-GUADALTEBA Malaga (Andalucia)"></a-entity>
+        <a-entity position="-1.880 -4.243 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SERRANIA DE RONDA Malaga (Andalucia)"></a-entity>
+        <a-entity position="-0.888 -4.608 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-MALAGA (Andalucia)"></a-entity>
+        <a-entity position="-1.178 -2.043 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CORDOBA (Andalucia)"></a-entity>
+        <a-entity position="0.424 -2.716 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SIERRA SUR DE JAEN (Andalucia)"></a-entity>
+        <a-entity position="0.958 -3.633 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-SIERRA NEVADA Granada (Andalucia)"></a-entity>
+        <a-entity position="2.905 -4.120 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-ALMERIA (Andalucia)"></a-entity>
+        <a-entity position="-2.098 -6.272 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-CEUTA"></a-entity>
+        <a-entity position="1.940 -7.487 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-MELILLA"></a-entity>
+        <a-entity position="-9.885 -6.410 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-TENERIFE (Islas Canarias)"></a-entity>
+        <a-entity position="-8.505 -7.398 0.6" rotation="50 0 0" scale="0.15 0.15 0.15" class="clickable-tres"
+        gltf-model="assets/models/map_pointer.glb" data-text="Grupo local, SEO-GRAN CANARIA (Islas Canarias)"></a-entity>
+
+        <!-- HIDE TEXT -->
+        <a-entity id="info-text-tres" visible="false" position="-10 0 1" rotation="30 0 0" scale="0.65 0.65 0.65">
+          <a-plane color="#ffffff" width="12" height="2"></a-plane>
+          <a-text font="assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" 
+          color="black" align="center" width="10" wrap-count="30"></a-text>
+      </a-entity>
+    
+      </a-entity>
+
+      <script>
+            const infoTextTres = document.querySelector('#info-text-tres');
+          
+            // Agrega un evento de clic a todos los elementos con la clase "clickable"
+            const clickableElementsTres = document.querySelectorAll('.clickable-tres');
+          
+            clickableElementsTres.forEach((element, index) => {
+              element.addEventListener('click', () => {
+                const textValue = obtenerTextoGrupos(index + 1); 
+                //console.log(element.getAttribute('data-text'))
+                //console.log(element.getAttribute('position'))
+                //const fixedPosition = element.getAttribute('position')
+                console.log(clickableElementsTres)
+                const fixedPosition = {...element.getAttribute('position')}
+                const fixedPosition2 = fixedPosition.z + 0.6
+                fixedPosition.z = fixedPosition2 
+                if (!infoTextTres.getAttribute('visible')) {
+                  infoTextTres.setAttribute('visible', true);
+                  infoTextTres.setAttribute('position', fixedPosition);
+                  infoTextTres.querySelector('a-text').setAttribute('value', textValue);
+                } else {
+                  infoTextTres.setAttribute('visible', false);
+                }
+              });
+            });
+            
+             // Función para obtener el texto adecuado para cada modelo
+             function obtenerTextoGrupos(modeloId) {
+               // Aquí debes implementar la lógica para obtener el texto correcto
+               // Puedes usar un switch o un objeto con los textos correspondientes
+               switch (modeloId) {
+                case 1:
+                    return "Grupo local, SEO-PONTEVEDRA (Galicia)";
+                case 2:
+                    return "Grupo local, SEO-CANTABRIA";
+                case 3:
+                    return "Grupo local, SEO-CASTRO (Bilbao)";
+                case 4:
+                    return "Grupo local, SEO-BETSAIDE (Vitoria)";
+                case 5:
+                    return "Grupo local, SEO-DONOSTIA (Pais Vasco)";
+                case 6:
+                    return "Grupo local, SEO-HUESCA (Aragon)";
+                case 7:
+                    return "Grupo local, SEO-ZARAGOZA (Aragon)";
+                case 8:
+                    return "Grupo local, SEO-TERUEL (Aragon)";
+                case 9:
+                    return "Grupo local, SEO-BARCELONA (Catalunya)";
+                case 10:
+                    return "Grupo local, SEO-SORIA (Castilla y Leon)";
+                case 11:
+                    return "Grupo local, SEO-VALLADOLID (Castilla y Leon)";
+                case 12:
+                    return "Grupo local, SEO-SEGOVIA (Castilla y Leon)";
+                case 13:
+                    return "Grupo local, SEO-AVILA (Castilla y Leon)";
+                case 14:
+                    return "Grupo local, SEO-SALAMANCA (Castilla y Leon)";
+                case 15:
+                    return "Grupo local, SEO-SIERRA NORTE DE MADRID (Madrid)";
+                case 16:
+                    return "Grupo local, SEO-SIERRA DE GUADARRAMA (Madrid)";
+                case 17:
+                    return "Grupo local, SEO-MONTICOLA (Madrid)";
+                case 18:
+                    return "Grupo local, SEO-ALECTORIS (Madrid)";
+                case 19:
+                    return "Grupo local, SEO-VANELLUS (Madrid)";
+                case 20:
+                    return "Grupo local, SEO-ARANJUEZ (Madrid)";
+                case 21:
+                    return "Grupo local, SEO-TALAVERA (Castilla la Mancha)";
+                case 22:
+                    return "Grupo local, SEO-CIUDAD REAL (Castilla la Mancha)";
+                case 23:
+                    return "Grupo local, SEO-CASTELLON (Comunitat Valenciana)";
+                case 24:
+                    return "Grupo local, SEO-ARDEA Valencia (Comunitat Valenciana)";
+                case 25:
+                    return "Grupo local, SEO-ALICANTE (Comunitat Valenciana)";
+                case 26:
+                    return "Grupo local, SEO-VIROT BALEARS (Isla de Mayorca)";
+                case 27:
+                    return "Grupo local, SEO-CACERES (Extremadura)";
+                case 28:
+                    return "Grupo local, SEO-BADAJOZ (Extremadura)";
+                case 29:
+                    return "Grupo local, SEO-HUELVA (Andalucia)";
+                case 30:
+                    return "Grupo local, SEO-SEVILLA (Andalucia)";
+                case 31:
+                    return "Grupo local, SEO-CADIZ (Andalucia)";
+                case 32:
+                    return "Grupo local, SEO-GUADALTEBA Malaga (Andalucia)";
+                case 33:
+                    return "Grupo local, SEO-SERRANIA DE RONDA Malaga (Andalucia)";
+                case 34:
+                    return "Grupo local, SEO-MALAGA (Andalucia)";
+                case 35:
+                    return "Grupo local, SEO-CORDOBA (Andalucia)";
+                case 36:
+                    return "Grupo local, SEO-SIERRA SUR DE JAEN (Andalucia)";
+                case 37:
+                    return "Grupo local, SEO-SIERRA NEVADA Granada (Andalucia)";
+                case 38:
+                    return "Grupo local, SEO-ALMERIA (Andalucia)";
+                case 39:
+                    return "Grupo local, SEO-CEUTA";
+                case 40:
+                    return "Grupo local, SEO-MELILLA"
+                case 41:
+                    return "Grupo local, SEO-TENERIFE (Islas Canarias)";
+                case 42:
+                    return "Grupo local, SEO-GRAN CANARIA (Islas Canarias)";
+                }
+
+             }
       </script>
 
     

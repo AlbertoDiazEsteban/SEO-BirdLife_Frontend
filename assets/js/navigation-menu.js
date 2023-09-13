@@ -10,7 +10,27 @@ document.addEventListener('DOMContentLoaded', function () {
     let intervalId = null;
     
     // Up
-    btnUp.addEventListener('mousedown', () => {
+    btnUp.addEventListener('touchstart', () => {
+        intervalId = setInterval(() => {
+          const currentPositionCamera = camera.getAttribute('position');
+          const newPositionCamera = { ...currentPositionCamera };
+          newPositionCamera.z -= incremento;
+
+          const currentPositionBird = bird.getAttribute('position');
+          const newPositionBird = { ...currentPositionBird };
+          newPositionBird.z -= incremento;
+
+          camera.setAttribute('position', newPositionCamera);
+          bird.setAttribute('position', newPositionBird);
+        }, 100);
+      });
+      btnUp.addEventListener('touchend', () => {
+        clearInterval(intervalId);
+      });
+      btnUp.addEventListener('touchcancel', () => {
+        clearInterval(intervalId);
+      });
+      btnUp.addEventListener('mousedown', () => {
         intervalId = setInterval(() => {
           const currentPositionCamera = camera.getAttribute('position');
           const newPositionCamera = { ...currentPositionCamera };
@@ -33,6 +53,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Down
+    btnDown.addEventListener('touchstart', () => {
+      intervalId = setInterval(() => {
+        const currentPositionCamera = camera.getAttribute('position');
+        const newPositionCamera = { ...currentPositionCamera };
+        newPositionCamera.z += incremento;
+
+        const currentPositionBird = bird.getAttribute('position');
+        const newPositionBird = { ...currentPositionBird };
+        newPositionBird.z += incremento;
+
+        camera.setAttribute('position', newPositionCamera);
+        bird.setAttribute('position', newPositionBird);
+      }, 100);
+    });
+    btnDown.addEventListener('touchend', () => {
+      clearInterval(intervalId);
+    });
+    btnDown.addEventListener('touchcancel', () => {
+      clearInterval(intervalId);
+    });
     btnDown.addEventListener('mousedown', () => {
       intervalId = setInterval(() => {
         const currentPositionCamera = camera.getAttribute('position');
@@ -56,6 +96,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   
     // Left
+    btnLeft.addEventListener('touchstart', () => {
+      intervalId = setInterval(() => {
+        const currentPositionCamera = camera.getAttribute('position');
+        const newPositionCamera = { ...currentPositionCamera };
+        newPositionCamera.x -= incremento;
+
+        const currentPositionBird = bird.getAttribute('position');
+        const newPositionBird = { ...currentPositionBird };
+        newPositionBird.x -= incremento;
+
+        camera.setAttribute('position', newPositionCamera);
+        bird.setAttribute('position', newPositionBird);
+      }, 100);
+    });
+    btnLeft.addEventListener('touchend', () => {
+      clearInterval(intervalId);
+    });
+    btnLeft.addEventListener('touchcancel', () => {
+      clearInterval(intervalId);
+    });
     btnLeft.addEventListener('mousedown', () => {
       intervalId = setInterval(() => {
         const currentPositionCamera = camera.getAttribute('position');
@@ -79,6 +139,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     // Right
+    btnRight.addEventListener('touchstart', () => {
+      intervalId = setInterval(() => {
+        const currentPositionCamera = camera.getAttribute('position');
+        const newPositionCamera = { ...currentPositionCamera };
+        newPositionCamera.x += incremento;
+
+        const currentPositionBird = bird.getAttribute('position');
+        const newPositionBird = { ...currentPositionBird };
+        newPositionBird.x += incremento;
+
+        camera.setAttribute('position', newPositionCamera);
+        bird.setAttribute('position', newPositionBird);
+      }, 100);
+    });
+    btnRight.addEventListener('touchend', () => {
+      clearInterval(intervalId);
+    });
+    btnRight.addEventListener('touchcancel', () => {
+      clearInterval(intervalId);
+    });
     btnRight.addEventListener('mousedown', () => {
       intervalId = setInterval(() => {
         const currentPositionCamera = camera.getAttribute('position');

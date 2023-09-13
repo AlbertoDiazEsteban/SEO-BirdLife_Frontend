@@ -9,7 +9,7 @@
     <script src="assets/js/aframe-babia-components.js"></script>
     
     <link rel="icon" href="assets/img/logo.svg">
-    <title>SEO-BirdLife prueba</title>
+    <title>SEO-BirdLife Hitos</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,56 +20,15 @@
     <script src="assets/js/app.js"></script>
     <link rel="stylesheet" href="assets/css/menu.css">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/stars.css">
+    
 
     <script src="assets/js/navigation-menu.js"></script>
     <link rel="stylesheet" href="./assets/css/navegacion-menu.css">
-    
-    <style>
-        *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-        body {
-        background: linear-gradient(180deg, #638294 0%, #2E3B42 100%);   
-        overflow: hidden;
-        }
-        #stars i {
-        width: 100vh;
-        height: 100vh;
-        position: absolute;
-        background: #fff;
-        border-radius: 50%;
-        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 90px #fff;
-        animation: animate 5s linear infinite;
-        z-index: -10;
-        }
-        @keyframes animate {
-        5% { opacity: 0.05; }
-        50% { opacity: 0.50; }
-        75% { opacity: 0.65; }
-        100% { opacity: 1; }
-        }
-        .menu-navegacion {
-                display: none;
-        }
-        @media only screen and (max-width: 768px) {
-        .menu-navegacion {
-                display: flex;
-        }
-        }
-        @media only screen and (max-width: 768px) {
-        .menu-navegacion {
-                display: flex;
-        }
-        }
-    </style>
-    
 </head>
 
 
 <body>
-
 <section id="stars"></section>
 
     <a-scene cursor="rayOrigin: mouse" id="AframeScene" frustum-culling="true">
@@ -77,47 +36,51 @@
 
         <!-- MENÚ FLOTANTE -->
         <div class="container">
-            <input type="checkbox" id="btn-mas">
-            <div class="redes">
-                <a href="sky-3.html" class="hitos">
-                    <img src="./assets/img/button/hitos.svg" alt="logo icono hitos">
-                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
-                    </svg>
-                </a>
-                <a href="sky-1.html" class="datos">
-                    <img src="./assets/img/button/datos.svg" alt="logo icono datos">
-                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.7"/>
-                    </svg>
-                </a>
-                <a href="sky-2.html" class="mapas">
-                    <img src="./assets/img/button/mapas.svg" alt="logo icono mapas">
-                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
-                    </svg>
-                </a>
-                <a href="https://seo.org/" class="seobirdlife">
-                    <img src="./assets/img/button/seo.svg" alt="logo icono datos">
-                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="btn-mas">
-                <img src="./assets/img/button/main-btn.svg" alt="logo icono datos">
-                <label for="btn-mas" class="fa fa-plus">
-                </label>
-            </div>
+                <input type="checkbox" id="btn-mas">
+                <div class="redes">
+                    <a href="sky-3.html" class="hitos">
+                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
+                        </svg>
+                        <img src="assets/img/button/hitos.svg" alt="logo icono hitos">
+                        <p style="color: white; text-shadow: 0px 0px 18px black;">Hitos</p>
+                    </a>
+                    <a href="sky-1.html" class="datos">
+                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.7"/>
+                        </svg>
+                        <img src="assets/img/button/datos.svg" alt="logo icono datos">
+                        <p style="color: white; text-shadow: 0px 0px 18px black;">Datos</p>
+                    </a>
+                    <a href="sky-2.html" class="mapas">
+                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
+                        </svg>
+                        <img src="assets/img/button/mapas.svg" alt="logo icono mapas">
+                        <p style="color: white; text-shadow: 0px 0px 18px black;">Mapas</p>
+                    </a>
+                    <a href="https://seo.org/" class="seobirdlife">
+                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="51" height="51" rx="67.5" fill="white" fill-opacity="0.2"/>
+                        </svg>
+                        <img src="assets/img/button/seo.svg" alt="logo icono datos">
+                        <p style="color: white; text-shadow: 0px 0px 18px black;">SEO-BirdLife</p>
+                    </a>
+                </div>
+                <div class="btn-mas">
+                    <img src="assets/img/button/main-btn.svg" alt="logo icono datos">
+                    <label for="btn-mas" class="fa fa-plus">
+                    </label>
+                </div>
         </div> 
 
     <!-- MENÚ NAVEGACIÓN EN RESPONSIVE -->
     <div class="menu-navegacion">
         <div class=" lft-rgt">
-            <button type="button" class="btn-mov btn-lft" onclick="moveCameraLeft">
+            <button type="button" class="btn-mov btn-lft">
               <img src="assets/img/button/nav-left.svg" alt="derecha">
             </button>
-            <button type="button" class="btn-mov btn-rgt" onclick="moveCameraRight">
+            <button type="button" class="btn-mov btn-rgt">
               <img src="assets/img/button/nav-right.svg" alt="izquierda">
             </button>
         </div>
@@ -125,7 +88,7 @@
             <button type="button" class="btn-mov btn-up">
               <img src="assets/img/button/nav-up.svg" alt="arriba">
             </button>
-            <button type="button" class="btn-mov btn-down" onclick="moveCameraDown">
+            <button type="button" class="btn-mov btn-down">
               <img src="assets/img/button/nav-down.svg" alt="abajo">
             </button>
         </div>
@@ -133,8 +96,10 @@
 
         <!-- ENVIROMENT -->
         <a-plane color="white" position="0 0 0" rotation="-90 0 0" width="0.25" height="200"></a-plane>
-        <a-light color="white" type="ambient" intensity="1" position="0 10 0"></a-light>
-        <a-sky src="assets/img/aurora.png"></a-sky>
+        <a-light color="white" type="ambient" intensity="0.7" position="0 20 0"></a-light>
+        <a-light color="white" type="point" intensity="0.3" position="0 70 0"></a-light>
+        <a-sky src="assets/img/aurora.png" repeat="4 1" opacity="0.9" shader="flat" 
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 30000"></a-sky>
         <a-entity material="fog: true"></a-entity>
         
         <a-camera position="0 1 30" wasd-controls></a-camera>
@@ -144,61 +109,57 @@
         ></a-entity>
 
          <!-- LUNA -->
-        <a-sphere color="white" radius="10" roughness="0.8" scale="2 2 2"
-         position="-30 30 -155" material="src: assets/img/moon.jpg" repeat="2 2"
+        <a-sphere color="white" radius="10" roughness="0.8" scale="2 2 2" opacity="1"
+         position="-30 30 -155" material="src: assets/img/moon.png" repeat="2 2"
         ></a-sphere>
-        <a-light color="white" type="point" intensity="0.2" position="0 0 -85"></a-light>
+        
+        
 
 
-
+        
+       
 
         <!-- PANEL HITOS 1 -->
-        <a-box position="-7 1 -10" rotation="-5 30 0" width="5" height="5" opacity="0.8" id="mi-panel"
-        scale="2 2 1" color="white" radius="0.5"></a-box>
-        <a-text position="-7 1 -9.2" rotation="-5 30 0" color="black" scale="2.2 2.2 2.2"
-        value="Conseguir que la ONU incluya el Derecho a un medio ambiente sano y de hecho a las organizaciones que promovieron esto, entre ellas SEO nos han dado un premio"
-        position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
-        font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2" 
-        ></a-text>
+        <a-entity class="panel" position="-7 1 -10" rotation="-1 30 0">
+           <a-entity position="0 0 0" scale="35 35 5" rotation="0 180 0"
+           gltf-model="assets/models/panel.glb"></a-entity>
+           <a-text position="0 0 0" rotation="0 0 0" color="black" scale="2.2 2.2 2.2"
+           value="Conseguir que la ONU incluya el Derecho a un medio ambiente sano y de hecho a las organizaciones que promovieron esto, entre ellas SEO nos han dado un premio"
+           position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
+           font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2"></a-text>
+        </a-entity>
         
         <!-- PANEL HITOS 2 -->
-        <a-box position="7 1 -30" rotation="-5 -30 0" width="5" height="5" opacity="0.8" id="mi-panel" 
-        scale="2 2 1" color="white" radius="0.5"></a-box>
-        <a-text position="7 1 -29.2" rotation="-5 -30 0" color="black" scale="2.2 2.2 2.2"
-        value="Los 25 años del Sacre que se podría ligar a la importancia de los programas de Ciencia Ciudadana (tanto en el número de programas como en datos conseguidos)"
-        position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
-        font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2" 
-        ></a-text>
+        <a-entity class="panel" position="7 1 -30" rotation="-1 -30 0">
+           <a-entity position="0 0 0" scale="35 35 5" rotation="0 180 0"
+           gltf-model="assets/models/panel.glb"></a-entity>
+           <a-text position="0 0 0" rotation="0 0 0" color="black" scale="2.2 2.2 2.2"
+           value="Los 25 años del Sacre que se podría ligar a la importancia de los programas de Ciencia Ciudadana (tanto en el número de programas como en datos conseguidos)"
+           position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
+           font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2"></a-text>
+        </a-entity>
  
         <!-- PANEL HITOS 3 -->
-        <a-box position="-7 1 -50" rotation="-5 30 0" width="5" height="5" opacity="0.8" id="mi-panel"
-        scale="2 2 1" color="white" radius="0.5"></a-box>
-        <a-text position="-7 1 -49.2" rotation="-5 30 0" color="black" scale="2.2 2.2 2.2" 
-        value="La publicación del Libro Rojo de las aves"
-        position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
-        font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2" 
-        ></a-text>
+        <a-entity class="panel" position="-7 1 -50" rotation="-1 30 0">
+           <a-entity position="0 0 0" scale="35 35 5" rotation="0 180 0"
+           gltf-model="assets/models/panel.glb"></a-entity>
+           <a-text position="0 0 0" rotation="0 0 0" color="black" scale="2.2 2.2 2.2" 
+           value="La publicación del Libro Rojo de las aves"
+           position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
+           font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2"></a-text>
+        </a-entity>
         
-         <!-- PANEL HITOS 4 -->
-        <a-box position="7 1 -70" rotation="-5 -30 0" width="5" height="5" opacity="0.8" id="mi-panel"
-        scale="2 2 1" color="white" radius="0.5"></a-box>
-        <a-text position="7 1 -69.2" rotation="-5 -30 0" color="black" scale="2.2 2.2 2.2"
-        value="Estar ligadoS a diferentes proyectos europeos, Programas de Ciencia Ciudadana, Olivares vivo, Cortadeira, Guardianes de la Naturaleza, Follower y el ZEPAMED"
-        position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
-        font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2" 
-        ></a-text>
-        
-
-
-
-
-
+        <!-- PANEL HITOS 4 -->
+        <a-entity class="panel" position="7 1 -70" rotation="-1 -30 0">
+           <a-entity position="0 0 0" scale="35 35 5" rotation="0 180 0"
+           gltf-model="assets/models/panel.glb"></a-entity>
+           <a-text position="0 0 0" rotation="0 0 0" color="black" scale="2.2 2.2 2.2"
+           value="Estar ligadoS a diferentes proyectos europeos, Programas de Ciencia Ciudadana, Olivares vivo, Cortadeira, Guardianes de la Naturaleza, Follower y el ZEPAMED"
+           position="0 0 0" rotation="0 0 0" color="#fff" width="4" align="center" 
+           font="./assets/font/YanoneKaffeesatz-Regular-msdf.json" negate="false" font-size="0.2"></a-text>
+        </a-entity>
         
 
-
-
-
-     
         <!-- OCULUS CONTROLLERS -->
         <!--
         <a-entity id="cameraRig">
@@ -213,303 +174,162 @@
                     thumbstick-logging></a-entity>
         </a-entity> -->
         
-        <!-- -------------------------------------- CLOUDS --------------------------------------- -->
-        <a-entity class="all-clouds" > 
+         <!-- -------------------------------------- CLOUDS --------------------------------------- -->
+         <a-entity class="all-clouds" > 
                     <!-- --------------------------------- LEFT CLOUDS --------------------------------- -->   
                     <a-entity>
-                    <a-entity class="cloud-left" class="cloud" position="-6.5 1.5 20"rotation="0.5 25 0" scale="0.7 0.7 0.7"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                    
-                    <a-entity class="cloud-left" class="cloud" position="-8.5 -1.5 10"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-6.5 2.5 0"rotation="0.5 25 0" scale="0.7 0.7 0.7"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-8.5 1.5 -10"rotation="0.5 25 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-6.5 -1.5 -20"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-8.5 2.5 -30"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-8.5 1.5 -40"rotation="0.5 25 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-6.5 -1.5 -50"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-left" class="cloud" position="-8.5 2.5 -60"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-9.5 1.5 20"rotation="0.5 25 0" scale="0.7 0.7 0.7"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-11.5 -1.5 10"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-9.5 2.5 0"rotation="0.5 25 0" scale="0.7 0.7 0.7"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-11.5 1.5 -10"rotation="0.5 25 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-9.5 -1.5 -20"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-11.5 2.5 -30"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-11.5 1.5 -40"rotation="0.5 25 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-9.5 -1.5 -50"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-left" class="cloud" position="-11.5 2.5 -60"rotation="0.5 25 0" scale="0.5 0.5 0.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                     </a-entity>
                     
                     <!-- --------------------------------- RIGHT CLUDS --------------------------------- -->   
                     <a-entity>
-                    <a-entity class="cloud-right" class="cloud" position="6.5 2.5 25"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="8.5 1.5 15"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="6.5 -1.5 5"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="8.5 2.5 -5"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="6.5 1.5 -15"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                    
-                    <a-entity class="cloud-right" class="cloud" position="8.5 -1.5 -25"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="8.5 2.5 -35"rotation="0.5 -25 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="6.5 1.5 -45"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="8.5 -1.5 -55"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-right" class="cloud" position="6.5 2.5 -65"rotation="0.5 -25 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="9.5 2.5 25"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="11.5 1.5 15"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="9.5 -1.5 5"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="11.5 2.5 -5"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="9.5 1.5 -15"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="11.5 -1.5 -25"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="11.5 2.5 -35"rotation="0.5 -25 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="9.5 1.5 -45"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="11.5 -1.5 -55"rotation="0.5 -25 0" scale="0.8 0.8 0.8"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-right" class="cloud" position="9.5 2.5 -65"rotation="0.5 -25 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                     </a-entity>  
                     
                     <!-- --------------------------------- TOP CLUDS --------------------------------- -->   
                     <a-entity>
-                    <a-entity class="cloud-top" class="cloud" position="-5 10 20"rotation="90 0 0" scale="2 2 2"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                        
-                    <a-entity class="cloud-top" class="cloud" position="-11 13 10"rotation="90 0 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-top" class="cloud" position="1 10 0"rotation="90 0 0" scale="2 2 2"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                        
-                    <a-entity class="cloud-top" class="cloud" position="14 13 -10"rotation="90 0 0" scale="1.5 1.5 1.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-top" class="cloud" position="-6 10 -20"rotation="90 0 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                        
-                    <a-entity class="cloud-top" class="cloud" position="-13.3 13 -30"rotation="90 0 0" scale="2 2 2"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-top" class="cloud" position="2 10 -40"rotation="90 0 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                        
-                    <a-entity class="cloud-top" class="cloud" position="12.5 13 -50"rotation="90 0 0" scale="1.5 1.5 1.5"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-top" class="cloud" position="0 13 -60"rotation="90 0 0" scale="2 2 2"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                        
-                    <a-entity class="cloud-top" class="cloud" position="-6.5 10 -70"rotation="90 0 0" scale="1 1 1"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="-5 10 20"rotation="90 0 0" scale="2 2 2"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="-11 13 10"rotation="90 0 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="1 10 0"rotation="90 0 0" scale="2 2 2"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="14 13 -10"rotation="90 0 0" scale="1.5 1.5 1.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="-6 10 -20"rotation="90 0 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="-13.3 13 -30"rotation="90 0 0" scale="2 2 2"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="2 10 -40"rotation="90 0 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="12.5 13 -50"rotation="90 0 0" scale="1.5 1.5 1.5"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="0 13 -60"rotation="90 0 0" scale="2 2 2"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-top" class="cloud" position="-6.5 10 -70"rotation="90 0 0" scale="1 1 1"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                     </a-entity> 
                          
                     <!-- --------------------------------- BOTTOM CLUDS --------------------------------- -->   
                     <a-entity>
-                            <a-entity class="cloud-bottom" class="cloud" position="-5 -10 20"rotation="90 0 0" scale="2 2 2"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                            
+                        <a-entity class="cloud-bottom" class="cloud" position="-5 -10 20"rotation="90 0 0" scale="2 2 2"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="-11 -13 10"rotation="90 0 0" scale="1.5 1.5 1.5"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                    
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="1 -10 0"rotation="90 0 0" scale="1 1 1"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                            
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="14 -13 -10"rotation="90 0 0" scale="2 2 2"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                    
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="-6 -10 -20"rotation="90 0 0" scale="1.5 1.5 1.5"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                            
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="-13.3 -3 -30"rotation="90 0 0" scale="1 1 1"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                    
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="2 -10 -40"rotation="90 0 0" scale="2 2 2"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                            
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="12.5 -13 -50"rotation="90 0 0" scale="1.5 1.5 1.5"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                    
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="0 -13 -60"rotation="90 0 0" scale="1 1 1"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
-                            
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                         <a-entity class="cloud-bottom" class="cloud" position="-6.5 -10 -70"rotation="90 0 0" scale="2 2 2"  
-                                gltf-model="assets/models/cloud_realistic.glb"
-                        ></a-entity>
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
                     </a-entity>  
                 
                     <!-- --------------------------------- BIG CLUDS --------------------------------- -->  
                     <a-entity>
-                    <a-entity class="cloud-big" class="cloud" opacity="0.4"
-                            position="10 0 20"rotation="0 -40 0" scale="3 2 3"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-big" class="cloud" opacity="0.4"
-                            position="-10 0 0"rotation="0 40 0" scale="3 2 3"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-big" class="cloud" opacity="0.4"
-                            position="10 0 -20"rotation="0 -40 0" scale="3 2 3"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-big" class="cloud" opacity="0.4"
-                            position="-10 0 -40"rotation="0 40 0" scale="3 2 3"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                
-                    <a-entity class="cloud-big" class="cloud" opacity="0.4"
-                            position="10 0 -60"rotation="0 -40 0" scale="3 2 3"  
-                            gltf-model="assets/models/cloud_realistic.glb"
-                    ></a-entity>
-                    </a-entity>
-        </a-entity>
-        <!-- -------------------------------------- BIRDS ---------------------------------------- -->
-        <a-entity class="all-birds">
-                    <a-entity id="birds" position="-6 -2.5 16" rotation="0 0 0" scale="4 4 4" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
+                        <a-entity class="cloud-big" class="cloud" opacity="0.4" position="16 0.5 20"rotation="0 -40 0" scale="3 2 3"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-big" class="cloud" opacity="0.4" position="-16 0.5 0"rotation="0 40 0" scale="3 2 3"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-big" class="cloud" opacity="0.4" position="16 -0.5 -20"rotation="0 -40 0" scale="3 2 3"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-big" class="cloud" opacity="0.4" position="-16 -0.5 -40"rotation="0 40 0" scale="3 2 3"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        <a-entity class="cloud-big" class="cloud" opacity="0.4" position="16 0.5 -60"rotation="0 -40 0" scale="3 2 3"  
+                        gltf-model="assets/models/cloud_realistic.glb"></a-entity>
+                        </a-entity>
+         </a-entity>
 
-                    <a-entity>
-                        <a-entity id="birds" position="8 -1.5 8" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-6 2.5 0" rotation="0 0 0" scale="2 2 2" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
+         <!-- -------------------------------------- BIRDS ---------------------------------------- -->
+         <a-entity class="all-birds">
+                    <a-entity class="birds" position="-6 -2.5 16" rotation="0 0 0" scale="4 4 4" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="8 -1.5 8" rotation="0 0 0" scale="3 3 3" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="-6 2.5 0" rotation="0 0 0" scale="2 2 2" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="8 1.5 -8" rotation="0 0 0" scale="4 4 4" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="8 -1.5 -24" rotation="0 0 0" scale="3 3 3" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="-6 2.5 -32" rotation="0 0 0" scale="4 4 4" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="8 -3.5 -40" rotation="0 0 0" scale="4 4 4" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="-6 1.5 -48" rotation="0 0 0" scale="2 2 2" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="6 3.5 -56" rotation="0 0 0" scale="4 4 4" 
+                    animation="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="-8 -2.5 -64" rotation="0 0 0" scale="3 3 3" 
+                    animation="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="6 -3.5 -72" rotation="0 0 0" scale="3 3 3" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="-8 3.5 -90" rotation="0 0 0" scale="2 2 2" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity>
+                    <a-entity class="birds" position="6 2.5 -138" rotation="0 0 0" scale="3 3 3" 
+                    animation-mixer="action" play-all-model-animations modify-materials 
+                    gltf-model="assets/models/birds-white.glb" roughness="0.8"></a-entity> 
+         </a-entity>
 
-                    <a-entity id="birds" position="8 1.5 -8" rotation="0 0 0" scale="4 4 4" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="8 -1.5 -24" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-6 2.5 -32" rotation="0 0 0" scale="4 4 4" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                
-                    <a-entity id="birds" position="8 -3.5 -40" rotation="0 0 0" scale="4 4 4" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-6 1.5 -48" rotation="0 0 0" scale="2 2 2" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="6 3.5 -56" rotation="0 0 0" scale="4 4 4" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-8 -2.5 -64" rotation="0 0 0" scale="3 3 3" 
-                        animation="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="6 -3.5 -72" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                    
-                    <a-entity id="birds" position="-8 3.5 -90" rotation="0 0 0" scale="2 2 2" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>
-                
-                    <a-entity id="birds" position="6 2.5 -138" rotation="0 0 0" scale="3 3 3" 
-                        animation-mixer="action" play-all-model-animations modify-materials 
-                        gltf-model="assets/models/birds.glb"
-                    ></a-entity>            
-            </a-entity>
-        </a-entity>
+         
     </a-scene>
-
-    <script>
-        stars = () => {
-            const count = 300;
-            const section = document.querySelector('#stars');
-            let i = 0;
-    
-            while (i < count) {
-                const star = document.createElement('i');
-                const x = Math.floor(Math.random() * window.innerWidth)
-                const y = Math.floor(Math.random() * window.innerHeight)
-                
-                const size = Math.random() * 1.75;
-                star.style.left = x+'px';
-                star.style.top = y+'px';
-                star.style.width = 1+size+'px';
-                star.style.height = 1+size+'px';
-    
-                const duration = Math.random() * 15;
-    
-                star.style.animationDuration = 2+duration+'s';
-                star.style.animationDelay = duration+'s';
-    
-                section.appendChild(star); 
-                i++;
-            }
-        } 
-        stars();
-    </script>
-     
+     <script src="assets/js/stars.js"></script>
 </body>
 </html>
