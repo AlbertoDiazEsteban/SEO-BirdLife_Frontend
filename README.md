@@ -1,8 +1,6 @@
 
 
 #  SEO Bird Life - Proyecto de Experiencia en A-Frame
-	
-(assets/img/logo.png)
 
 "SEO Bird Life" es una experiencia interactiva desarrollada con A-Frame que combina elementos de gráficos, datos, mapas interactivos y una escena nocturna para resaltar los hitos de la empresa. Este proyecto está diseñado para proporcionar una experiencia envolvente y atractiva para los usuarios y presenta múltiples páginas.
 
@@ -11,7 +9,7 @@
 -   **Scrum Master**: Santiago Andrade
 -   **Product owner**: Alberto Diaz
 -   **Web developer**:
-    -   Bea Mendez
+    -   Bea Mendes
     -   Johan Gonzales
     -   Mariama Salhi
 
