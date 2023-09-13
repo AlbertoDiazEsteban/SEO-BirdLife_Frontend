@@ -65,7 +65,7 @@
 
 Hemos tomado inspiración de las siguientes páginas y proyectos:
 
--   [Ejemplo de Página A-Frame](https://aframe.io/a-painter/)
--   [Proyecto de Experiencia Interactiva](https://www.behance.net/onboarding/adobe)
--   [Referencia de Usabilidad Móvil](https://www.audubon.org/)
+-   [Ejemplo de Página A-Frame]			(https://aframe.io/a-painter/)
+-   [Proyecto de Experiencia Interactiva]	(https://www.behance.net/onboarding/adobe)
+-   [Referencia de Usabilidad Móvil]		(https://www.audubon.org/)
 
