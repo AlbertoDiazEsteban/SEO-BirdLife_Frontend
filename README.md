@@ -1,11 +1,10 @@
 
 
 #  SEO Bird Life - Proyecto de Experiencia en A-Frame
+	
+<img src="(assets/img/logo.png">
 
 "SEO Bird Life" es una experiencia interactiva desarrollada con A-Frame que combina elementos de gráficos, datos, mapas interactivos y una escena nocturna para resaltar los hitos de la empresa. Este proyecto está diseñado para proporcionar una experiencia envolvente y atractiva para los usuarios y presenta múltiples páginas.
-
-            
-            <img src="http://www.asociacionparquedunar.org/575-medium_default/seo-birdlife.jpg">
 
 # Participantes del Proyecto
 
@@ -18,13 +17,21 @@
 
 ## Descripción
 
-1.  **Entrada a la pagina principal**: La primera página es una entrada que facilita e acceso a cada una de las experiencias .                                
-  
+1.  **Entrada a la pagina principal**: La primera página es una entrada que facilita e acceso a cada una de las experiencias .
+![Imagen de Entrada](assets/img/index.png)
+
+    
 2.  **Escena de Gráficos y Datos**: La segunda página presenta una escena interactiva con gráficos y datos relevantes.
+![Imagen de Gráficos y Datos](assets/img/graphs.png)
+
     
 3.  **Escena de Mapas Interactivos**: La tercera página ofrece un conjunto de mapas interactivos que los usuarios pueden explorar para obtener información adicional.
+![Imagen de Mapas Interactivos](assets/img/maps.png)
+
     
 4.  **Escena Nocturna de Hitos**: La cuarta página muestra una escena nocturna que resalta los hitos de tu empresa de una manera visualmente atractiva.
+![Imagen de Escena Nocturna](assets/img/night.png)
+
 
 ## Características Principales
 
@@ -58,6 +65,7 @@
 
 Hemos tomado inspiración de las siguientes páginas y proyectos:
 
--   [Ejemplo de Página A-Frame](https://chat.openai.com/c/enlace_a_ejemplo1)
--   [Proyecto de Experiencia Interactiva](https://chat.openai.com/c/enlace_a_ejemplo2)
--   [Referencia de Usabilidad Móvil](https://chat.openai.com/c/enlace_a_ejemplo3)
+-   [Ejemplo de Página A-Frame](https://aframe.io/a-painter/)
+-   [Proyecto de Experiencia Interactiva](https://www.behance.net/onboarding/adobe)
+-   [Referencia de Usabilidad Móvil](https://www.audubon.org/)
+
